@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientación para Solicitar un Crédito - ScoreMX</title>
+    <link rel="stylesheet" href="./dist/output.css">
+        
+        <!-- SEO basics -->
+        <meta name="description" content="Orientación personalizada para solicitar un crédito en México. Recibe consejos prácticos y análisis de tu perfil financiero antes de solicitar financiamiento.">
+        <meta name="keywords" content="orientación crédito, solicitar crédito, consejos financieros, perfil crediticio, México">
+        <link rel="canonical" href="https://scoremx.org/servicios/preparacion-perfil.html">
+        <meta name="robots" content="index,follow">
+
+        <!-- Favicons / PWA -->
+        <link rel="icon" href="./images/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+        <link rel="manifest" href="./images/site.webmanifest">
+        <meta name="theme-color" content="#0b0f14">
+
+        <!-- UX / Performance hints -->
+        <meta name="referrer" content="strict-origin-when-cross-origin">
+        <meta name="format-detection" content="telephone=no">
+        
+
+        <!-- Organization structured data -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Orientación para Solicitar un Crédito",
+          "description": "Asesoría personalizada para orientarte antes de solicitar un crédito",
+          "provider": {
+            "@type": "Organization",
+            "name": "ScoreMX",
+            "url": "https://scoremx.org/"
+          },
+          "areaServed": ["MX","US"],
+          "price": "499",
+          "priceCurrency": "MXN"
+        }
+        </script>
+        
+        <!-- Custom styles for tabs -->
+        <style>
+            .tab-btn {
+                position: relative;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                border: 1px solid transparent;
+            }
+            
+            .tab-btn:hover:not(.active) {
+                background-color: rgba(255, 255, 255, 0.05);
+                transform: translateY(-1px);
+            }
+            
+            .tab-btn.active {
+                position: relative;
+                z-index: 10;
+            }
+            
+            /* Smooth transitions for tab switching */
+            .tab-pane {
+                transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            .tab-pane.hidden {
+                opacity: 0;
+                transform: translateY(15px);
+                pointer-events: none;
+            }
+            
+            .tab-pane:not(.hidden) {
+                opacity: 1;
+                transform: translateY(0);
+                pointer-events: auto;
+            }
+            
+            /* Container glow effect */
+            .tab-container {
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+            
+            /* Responsive adjustments */
+            @media (max-width: 640px) {
+                .tab-container {
+                    flex-direction: column;
+                    width: 100%;
+                    max-width: 320px;
+                }
+                
+                .tab-btn {
+                    width: 100%;
+                    text-align: center;
+                }
+                
+                .help-card {
+                    padding: 1rem;
+                }
+                
+                .faq-question h3 {
+                    font-size: 1rem;
+                    line-height: 1.4;
+                }
+            }
+            
+            @media (max-width: 768px) {
+                .tab-container {
+                    padding: 0.75rem;
+                }
+                
+                .help-card {
+                    padding: 1.5rem;
+                }
+            }
+            
+            @media (max-width: 1024px) {
+                .company-logos img {
+                    height: 2rem;
+                }
+            }
+        </style>
+</head>
+<body class="bg-cursor-black text-cursor-white font-body">
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-xl border-b border-gray-800 transition-all duration-300">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <img src="./images/logo.webp" alt="ScoreMX" class="h-8">
+                </div>
+
+                <!-- Navigation Menu -->
+                <div class="nav-menu hidden md:flex space-x-8">
+                    <a href="index.html" class="btn-text">Inicio</a>
+                    
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <button class="btn-text flex items-center space-x-1">
+                            <span>Servicios</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-gray-900 border border-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-2">
+                                <a href="revision-score.html" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 transition-colors">
+                                    Analizar mi score
+                                </a>
+                                <a href="preparacion-perfil.html" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 transition-colors">
+                                    Orientación para mi perfil
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="ventajas.html" class="btn-text">Ventajas</a>
+                    <a href="sobre-nosotros.html" class="btn-text">Sobre nosotros</a>
+                    <a href="contacto.html" class="btn-text">Contacto</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="mobile-menu-btn p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-800 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay fixed inset-0 bg-black/95 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="flex flex-col h-full">
+            <div class="flex justify-between items-center p-4 border-b border-gray-800">
+                <img src="./images/logo.webp" alt="ScoreMX" class="h-8">
+                <button class="mobile-menu-close p-2 rounded-md text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav class="flex-1 px-4 py-8">
+                <div class="space-y-6">
+                    <a href="index.html" class="block text-xl text-gray-300 hover:text-white transition-colors">Inicio</a>
+                    
+                    <!-- Mobile Services Dropdown -->
+                    <div class="mobile-services-dropdown">
+                        <button class="mobile-services-btn flex items-center justify-between w-full text-xl text-gray-300 hover:text-white transition-colors">
+                            <span>Servicios</span>
+                            <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="mobile-services-content hidden mt-4 ml-4 space-y-3">
+                            <a href="revision-score.html" class="block text-lg text-gray-400 hover:text-white transition-colors">
+                                Analizar mi score
+                            </a>
+                            <a href="preparacion-perfil.html" class="block text-lg text-gray-400 hover:text-white transition-colors">
+                                Orientación para mi perfil
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="ventajas.html" class="block text-xl text-gray-300 hover:text-white transition-colors">Ventajas</a>
+                    <a href="sobre-nosotros.html" class="block text-xl text-gray-300 hover:text-white transition-colors">Sobre nosotros</a>
+                    <a href="contacto.html" class="block text-xl text-gray-300 hover:text-white transition-colors">Contacto</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+        <div class="hero-bg absolute inset-0 bg-gradient-to-br from-cursor-black via-gray-900 to-cursor-black"></div>
+        
+        <div class="hero-content relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="hero-title text-6xl md:text-8xl font-bold mb-8 gradient-text">
+                Orientación para<br>
+                <span class="gradient-text">solicitar un crédito</span>
+            </h1>
+            <p class="hero-description text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+                Asesoría personalizada para orientarte antes de solicitar un crédito, considerando tu perfil financiero, historial y objetivos. Usamos referencias de información pública y tu propia información para ayudarte a identificar opciones más adecuadas y prevenir rechazos innecesarios.
+            </p>
+            
+            <div class="hero-actions flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                <a href="#solicitar" class="btn-primary text-lg px-8 py-4">
+                    Solicitar orientación
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content with Tabs -->
+    <section class="py-12 sm:py-16 md:py-20 bg-cursor-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Tab Navigation -->
+            <div class="flex justify-center mb-8 sm:mb-12 md:mb-16">
+                <div class="tab-container inline-flex bg-cursor-black backdrop-blur-sm rounded-xl p-1.5 border border-gray-800/50 shadow-lg">
+                    <button class="tab-btn active px-4 sm:px-6 md:px-8 py-2 sm:py-3 text-base sm:text-lg font-medium rounded-lg transition-all duration-300 text-white bg-white/10 border border-gray-800 shadow-lg" data-tab="servicio">
+                        Servicio
+                    </button>
+                    <button class="tab-btn px-4 sm:px-6 md:px-8 py-2 sm:py-3 text-base sm:text-lg font-medium rounded-lg transition-all duration-300 text-gray-400 hover:text-gray-300" data-tab="precios">
+                        Precios y condiciones
+                    </button>
+                    <button class="tab-btn px-4 sm:px-6 md:px-8 py-2 sm:py-3 text-base sm:text-lg font-medium rounded-lg transition-all duration-300 text-gray-400 hover:text-gray-300" data-tab="solicitar">
+                        Solicitar orientación
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Tab 1: Servicio -->
+                <div id="servicio" class="tab-pane active">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                        <!-- Card 1 -->
+                        <div class="help-card p-4 sm:p-6 lg:p-8 bg-white/10 border border-gray-600/50 rounded-xl">
+                            <h3 class="text-xl sm:text-2xl font-medium text-gray-300 mb-2">¿Qué es este servicio?</h3>
+                            <div class="border-t border-gray-600/50 mb-4"></div>
+                            <p class="text-gray-300 mb-4 text-sm">
+                                Asesoría personalizada para orientarte antes de solicitar un crédito, considerando tu perfil financiero, historial y objetivos. Usamos referencias de información pública y tu propia información para ayudarte a identificar opciones más adecuadas y prevenir rechazos innecesarios.
+                            </p>
+                            <div class="border-t border-gray-600/50 mb-4"></div>
+                            <div class="space-y-2">
+                                <div class="flex items-center text-gray-300 text-sm">
+                                    <svg class="w-4 h-4 text-gray-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                    Consejos claros y prácticos
+                                </div>
+                                <div class="flex items-center text-gray-300 text-sm">
+                                    <svg class="w-4 h-4 text-gray-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                    Sin papeleo innecesario
+                                </div>
+                                <div class="flex items-center text-gray-300 text-sm">
+                                    <svg class="w-4 h-4 text-gray-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                    Basado en datos de acceso público
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="help-card p-4 sm:p-6 lg:p-8 bg-white/10 border border-gray-600/50 rounded-xl">
+                            <h3 class="text-xl sm:text-2xl font-medium text-gray-300 mb-2">Pasos para obtener orientación</h3>
+                            <div class="border-t border-gray-600/50 mb-4"></div>
+                            <p class="text-gray-300 mb-4 text-sm">
+                                Proceso simple que respeta tu privacidad y te entrega recomendaciones claras en un plazo de 24–48 horas hábiles. Tus datos se manejan de forma confidencial y no se comparten con terceros.
+                            </p>
+                            <div class="border-t border-gray-600/50 mb-4"></div>
+                            <div class="space-y-2">
+                                <div class="flex items-center text-gray-300 text-sm">
+                                    <svg class="w-4 h-4 text-gray-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                    Envía tu solicitud
+                                </div>
+                                <div class="flex items-center text-gray-300 text-sm">
+                                    <svg class="w-4 h-4 text-gray-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                    Procesamos la información
+                                </div>
+                                <div class="flex items-center text-gray-300 text-sm">
+                                    <svg class="w-4 h-4 text-gray-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                    Recibe recomendaciones por correo
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="help-card p-4 sm:p-6 lg:p-8 bg-white/10 border border-gray-600/50 rounded-xl">
+                            <h3 class="text-xl sm:text-2xl font-medium text-gray-300 mb-2">Aclaración importante</h3>
+                            <div class="border-t border-gray-600/50 mb-4"></div>
+                            <p class="text-gray-300 mb-4 text-sm">
+                                No somos una entidad financiera ni intermediamos en la aprobación de créditos. Nuestro servicio es informativo y se basa en fuentes públicas y datos proporcionados por el usuario. No garantiza la obtención de financiamiento ni sustituye el análisis de una institución autorizada.
+                            </p>
+                            <div class="border-t border-gray-600/50 mb-4"></div>
+                            <div class="space-y-2">
+                                <div class="flex items-center text-gray-300 text-sm">
+                                    <svg class="w-4 h-4 text-gray-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                    No gestionamos trámites oficiales
+                                </div>
+                                <div class="flex items-center text-gray-300 text-sm">
+                                    <svg class="w-4 h-4 text-gray-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                    No emitimos documentos oficiales
+                                </div>
+                                <div class="flex items-center text-gray-300 text-sm">
+                                    <svg class="w-4 h-4 text-gray-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                    Solo orientación informativa
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Precios y condiciones -->
+                <div id="precios" class="tab-pane hidden">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                        <!-- Card 1 - Main Price Card -->
+                        <div class="help-card p-4 sm:p-6 lg:p-8 bg-white/10 border border-gray-600/50 rounded-xl">
+                            <h3 class="text-xl sm:text-2xl font-medium text-gray-300 mb-2">Precio del servicio</h3>
+                            <div class="text-2xl font-bold text-blue-400 mb-3">$499 MXN</div>
+                            <div class="border-t border-gray-600/50 mb-4"></div>
+                            <p class="text-gray-300 mb-4 text-sm">
+                                La orientación para solicitar un crédito tiene un costo único y fijo. No hay suscripciones ni cargos recurrentes. El costo cubre el análisis de tu perfil y la entrega de recomendaciones claras para que tomes decisiones más seguras.
+                            </p>
+                            <div class="border-t border-gray-600/50 mb-4"></div>
+                            <div class="space-y-2">
+                                <div class="flex items-center text-gray-300 text-sm">
+                                    <svg class="w-4 h-4 text-gray-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                    Precio fijo: $499 MXN
+                                </div>
+                                <div class="flex items-center text-gray-300 text-sm">
+                                    <svg class="w-4 h-4 text-gray-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                    Sin cargos ocultos
+                                </div>
+                                <div class="flex items-center text-gray-300 text-sm">
+                                    <svg class="w-4 h-4 text-gray-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                    Entrega en 24–48 horas hábiles
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="help-card p-4 sm:p-6 lg:p-8 bg-white/10 border border-gray-600/50 rounded-xl">
+                            <h3 class="text-xl sm:text-2xl font-medium text-gray-300 mb-2">Lo que incluye</h3>
+                            <div class="border-t border-gray-600/50 mb-4"></div>
+                            <p class="text-gray-300 mb-4 text-sm">
+                                Información útil adaptada a tu situación, explicada de manera clara para facilitar la comprensión.
+                            </p>
+                            <div class="border-t border-gray-600/50 mb-4"></div>
+                            <div class="space-y-2">
+                                <div class="flex items-center text-gray-300 text-sm">
+                                    <svg class="w-4 h-4 text-gray-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                    Análisis básico de tu perfil financiero
+                                </div>
+                                <div class="flex items-center text-gray-300 text-sm">
+                                    <svg class="w-4 h-4 text-gray-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                    Consejos sobre cómo mejorar tu solicitud
+                                </div>
+                                <div class="flex items-center text-gray-300 text-sm">
+                                    <svg class="w-4 h-4 text-gray-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                    Recomendaciones de preparación de documentos
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="help-card p-4 sm:p-6 lg:p-8 bg-white/10 border border-gray-600/50 rounded-xl">
+                            <h3 class="text-xl sm:text-2xl font-medium text-gray-300 mb-2">Limitaciones</h3>
+                            <div class="border-t border-gray-600/50 mb-4"></div>
+                            <p class="text-gray-300 mb-4 text-sm">
+                                Nuestro servicio no sustituye la evaluación oficial de una institución financiera ni garantiza la aprobación del crédito.
+                            </p>
+                            <div class="border-t border-gray-600/50 mb-4"></div>
+                            <div class="space-y-2">
+                                <div class="flex items-center text-gray-300 text-sm">
+                                    <svg class="w-4 h-4 text-gray-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                    No gestionamos solicitudes de crédito
+                                </div>
+                                <div class="flex items-center text-gray-300 text-sm">
+                                    <svg class="w-4 h-4 text-gray-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                    No garantizamos resultados
+                                </div>
+                                <div class="flex items-center text-gray-300 text-sm">
+                                    <svg class="w-4 h-4 text-gray-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                    Precio solo por nuestro trabajo de orientación
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Solicitar orientación -->
+                <div id="solicitar" class="tab-pane hidden">
+                    <div class="max-w-2xl mx-auto px-4 sm:px-0">
+                        <div class="text-center mb-6 sm:mb-8">
+                            <h3 class="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Solicitar orientación</h3>
+                            <p class="text-gray-300 text-sm sm:text-base">
+                                Completa este formulario para recibir tu orientación personalizada. Nos pondremos en contacto en un plazo estimado de 24–48 horas hábiles.
+                            </p>
+                        </div>
+
+                        <form class="space-y-4 sm:space-y-6">
+                            <div>
+                                <label for="nombre" class="block text-sm font-medium text-gray-300 mb-2">Nombre completo *</label>
+                                <input type="text" id="nombre" name="nombre" required 
+                                       class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base">
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email *</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base">
+                            </div>
+
+                            <div>
+                                <label for="telefono" class="block text-sm font-medium text-gray-300 mb-2">Teléfono (opcional)</label>
+                                <input type="tel" id="telefono" name="telefono" 
+                                       class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base">
+                            </div>
+
+                            <div>
+                                <label for="comentarios" class="block text-sm font-medium text-gray-300 mb-2">Comentarios adicionales</label>
+                                <textarea id="comentarios" name="comentarios" rows="3" 
+                                          class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"></textarea>
+                            </div>
+
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <input type="checkbox" id="aceptar-politica" name="aceptar-politica" required 
+                                           class="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-700 rounded bg-gray-800">
+                                    <label for="aceptar-politica" class="ml-3 text-sm text-gray-300">
+                                        Acepto la <a href="aviso-de-privacidad.html" class="text-blue-400 hover:underline">Política de privacidad</a> *
+                                    </label>
+                                </div>
+
+                                <div class="flex items-start">
+                                    <input type="checkbox" id="aceptar-terminos" name="aceptar-terminos" required 
+                                           class="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-700 rounded bg-gray-800">
+                                    <label for="aceptar-terminos" class="ml-3 text-sm text-gray-300">
+                                        Acepto los <a href="terminos.html" class="text-blue-400 hover:underline">Términos y condiciones</a> *
+                                    </label>
+                                </div>
+
+                                <div class="flex items-start">
+                                    <input type="checkbox" id="aceptar-servicio" name="aceptar-servicio" required 
+                                           class="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-700 rounded bg-gray-800">
+                                    <label for="aceptar-servicio" class="ml-3 text-sm text-gray-300">
+                                        Entiendo que este servicio es informativo y no sustituye el análisis de una institución autorizada *
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full btn-primary py-3 sm:py-4 text-base sm:text-lg font-medium">
+                                Enviar solicitud
+                            </button>
+                        </form>
+
+                        <div class="mt-6 sm:mt-8 p-4 sm:p-6 bg-gray-800/50 rounded-lg border border-gray-700">
+                            <p class="text-xs sm:text-sm text-gray-300 text-center">
+                                <strong>Aviso Legal:</strong> Al enviar este formulario, aceptas nuestra Política de privacidad y confirmas que entiendes que este servicio es informativo y no sustituye la evaluación oficial de una institución financiera.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 sm:py-16 md:py-20 bg-cursor-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400 text-xs sm:text-sm uppercase tracking-wider mb-6 sm:mb-8">Usado por profesionales en todo México</p>
+            <div class="company-logos grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 justify-items-center items-center mb-6 sm:mb-8">
+                <img 
+                    src="./images/logos/zenqor.webp" 
+                    alt='Logo ficticio "ZENQOR"' 
+                    width="160" 
+                    height="60" 
+                    loading="lazy" 
+                    decoding="async" 
+                    draggable="false"
+                    class="h-8 sm:h-10 md:h-12 opacity-60 hover:opacity-100 transition-all duration-300 select-none"
+                >
+                <img 
+                    src="./images/logos/lumora.webp" 
+                    alt='Logo ficticio "LUMORA"' 
+                    width="160" 
+                    height="60" 
+                    loading="lazy" 
+                    decoding="async" 
+                    draggable="false"
+                    class="h-8 sm:h-10 md:h-12 opacity-60 hover:opacity-100 transition-all duration-300 select-none"
+                >
+                <img 
+                    src="./images/logos/orbion.webp" 
+                    alt='Logo ficticio "ORBION"' 
+                    width="160" 
+                    height="60" 
+                    loading="lazy" 
+                    decoding="async" 
+                    draggable="false"
+                    class="h-8 sm:h-10 md:h-12 opacity-60 hover:opacity-100 transition-all duration-300 select-none"
+                >
+                <img 
+                    src="./images/logos/travera.webp" 
+                    alt='Logo ficticio "TRAVERA"' 
+                    width="160" 
+                    height="60" 
+                    loading="lazy" 
+                    decoding="async" 
+                    draggable="false"
+                    class="h-8 sm:h-10 md:h-12 opacity-60 hover:opacity-100 transition-all duration-300 select-none"
+                >
+                <img 
+                    src="./images/logos/velument.webp" 
+                    alt='Logo ficticio "VELUMENT"' 
+                    width="160" 
+                    height="60" 
+                    loading="lazy" 
+                    decoding="async" 
+                    draggable="false"
+                    class="h-8 sm:h-10 md:h-12 opacity-60 hover:opacity-100 transition-all duration-300 select-none"
+                >
+                <img 
+                    src="./images/logos/vireno.webp" 
+                    alt='Logo ficticio "VIRENO"' 
+                    width="160" 
+                    height="60" 
+                    loading="lazy" 
+                    decoding="async" 
+                    draggable="false"
+                    class="h-8 sm:h-10 md:h-12 opacity-60 hover:opacity-100 transition-all duration-300 select-none"
+                >
+                <img 
+                    src="./images/logos/fynora.webp" 
+                    alt='Logo ficticio "FYNORA"' 
+                    width="160" 
+                    height="60" 
+                    loading="lazy" 
+                    decoding="async" 
+                    draggable="false"
+                    class="h-8 sm:h-10 md:h-12 opacity-60 hover:opacity-100 transition-all duration-300 select-none"
+                >
+                <img 
+                    src="./images/logos/kayro.webp" 
+                    alt='Logo ficticio "KAYRO"' 
+                    width="160" 
+                    height="60" 
+                    loading="lazy" 
+                    decoding="async" 
+                    draggable="false"
+                    class="h-8 sm:h-10 md:h-12 opacity-60 hover:opacity-100 transition-all duration-300 select-none"
+                >
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-12 sm:py-16 md:py-20 bg-cursor-black">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Preguntas frecuentes</h2>
+                <p class="text-gray-300 text-base sm:text-lg">Resolvemos tus dudas sobre nuestro servicio de orientación</p>
+            </div>
+
+            <div class="space-y-6 sm:space-y-8">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item border-b border-gray-800 pb-6 sm:pb-8">
+                    <button class="faq-question w-full text-left flex justify-between items-start group">
+                        <h3 class="text-lg sm:text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                            ¿Garantizan la aprobación de mi crédito?
+                        </h3>
+                        <svg class="w-6 h-6 text-gray-400 group-hover:text-blue-400 transition-colors transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-300 leading-relaxed" style="display: none;">
+                        <p>No, solo es orientación. Nuestro servicio te proporciona consejos y análisis informativos para mejorar tu perfil crediticio, pero la aprobación final depende de cada institución financiera.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item border-b border-gray-800 pb-6 sm:pb-8">
+                    <button class="faq-question w-full text-left flex justify-between items-start group">
+                        <h3 class="text-lg sm:text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                            ¿Usan mi información para otros fines?
+                        </h3>
+                        <svg class="w-6 h-6 text-gray-400 group-hover:text-blue-400 transition-colors transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-300 leading-relaxed" style="display: none;">
+                        <p>No, es confidencial. Tu información se utiliza únicamente para brindarte la orientación solicitada y no se comparte con terceros. Respetamos tu privacidad y cumplimos con todas las normativas de protección de datos.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item border-b border-gray-800 pb-6 sm:pb-8">
+                    <button class="faq-question w-full text-left flex justify-between items-start group">
+                        <h3 class="text-lg sm:text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                            ¿En cuánto tiempo recibiré la orientación?
+                        </h3>
+                        <svg class="w-6 h-6 text-gray-400 group-hover:text-blue-400 transition-colors transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-300 leading-relaxed" style="display: none;">
+                        <p>En un plazo estimado de 24-48 horas hábiles después de recibir tu solicitud. Nuestro equipo revisará tu información y te contactará para brindarte la orientación personalizada.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item border-b border-gray-800 pb-6 sm:pb-8">
+                    <button class="faq-question w-full text-left flex justify-between items-start group">
+                        <h3 class="text-lg sm:text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                            ¿Puedo usar esta orientación para cualquier tipo de crédito?
+                        </h3>
+                        <svg class="w-6 h-6 text-gray-400 group-hover:text-blue-400 transition-colors transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-300 leading-relaxed" style="display: none;">
+                        <p>Sí, es genérica y adaptada a tu perfil. Nuestras recomendaciones te ayudarán a mejorar tu situación crediticia general, lo que puede beneficiarte al solicitar cualquier tipo de financiamiento.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item border-b border-gray-800 pb-6 sm:pb-8">
+                    <button class="faq-question w-full text-left flex justify-between items-start group">
+                        <h3 class="text-lg sm:text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                            ¿Cobran algún extra?
+                        </h3>
+                        <svg class="w-6 h-6 text-gray-400 group-hover:text-blue-400 transition-colors transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-300 leading-relaxed" style="display: none;">
+                        <p>No, solo el precio fijo indicado. El costo de $499 MXN es único y no incluye cargos ocultos ni costos adicionales. Pagas solo por nuestro trabajo de orientación y análisis.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item border-b border-gray-800 pb-6 sm:pb-8">
+                    <button class="faq-question w-full text-left flex justify-between items-start group">
+                        <h3 class="text-lg sm:text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                            ¿Qué diferencia hay con otros servicios similares?
+                        </h3>
+                        <svg class="w-6 h-6 text-gray-400 group-hover:text-blue-400 transition-colors transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-300 leading-relaxed" style="display: none;">
+                        <p>Nuestro enfoque es personalizado y transparente. No prometemos milagros, solo te damos información clara y consejos prácticos basados en tu situación real. Además, mantenemos total transparencia sobre las limitaciones de nuestro servicio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-black/95 backdrop-blur-xl py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="footer-content">
+                <div class="footer-top flex flex-col lg:flex-row justify-between items-start mb-12">
+                    <div class="footer-brand mb-8 lg:mb-0">
+                        <img src="./images/logo.webp" alt="ScoreMX" class="h-8 mb-4">
+                        <div class="footer-contact space-y-2">
+                            <div class="flex flex-col space-y-1">
+                                <a href="mailto:admin@scoremx.org" class="footer-link text-gray-400 hover:text-white transition-colors duration-300 relative group">
+                                    admin@scoremx.org
+                                    <span class="footer-link-underline absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                                    <svg class="footer-link-arrow absolute -right-6 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400 group-hover:text-white transition-colors duration-300 opacity-0 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"></path>
+                                    </svg>
+                                </a>
+                                <a href="tel:+525416565150" class="footer-link text-gray-400 hover:text-white transition-colors duration-300 relative group">
+                                    +52 54 1656 5150
+                                    <span class="footer-link-underline absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                                    <svg class="footer-link-arrow absolute -right-6 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400 group-hover:text-white transition-colors duration-300 opacity-0 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"></path>
+                                    </svg>
+                                </a>
+                                <a href="tel:+13055550198" class="footer-link text-gray-400 hover:text-white transition-colors duration-300 relative group">
+                                    +1 305 555 0198
+                                    <span class="footer-link-underline absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                                    <svg class="footer-link-arrow absolute -right-6 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400 group-hover:text-white transition-colors duration-300 opacity-0 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-language mb-8 lg:mb-0 flex items-center gap-3">
+                        <button type="button" class="open-cookie-settings text-gray-400 hover:text-white transition-colors underline underline-offset-4">Preferencias de cookies</button>
+                        <select class="bg-gray-800 border border-gray-700 text-white px-4 py-2 rounded-lg footer-lang-select"><option value="es">Español</option><option value="en">English</option></select>
+                    </div>
+                </div>
+                <div class="footer-sections grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <div class="footer-section"><h4 class="text-white font-semibold mb-4 uppercase tracking-wider">Servicios</h4>
+                        <ul class="space-y-2">
+                            <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Inicio</a></li>
+                            <li><a href="revision-score.html" class="text-gray-400 hover:text-white transition-colors">Analizar mi score</a></li>
+                            <li><a href="preparacion-perfil.html" class="text-gray-400 hover:text-white transition-colors">Orientación para mi perfil</a></li>
+                            <li><a href="ventajas.html" class="text-gray-400 hover:text-white transition-colors">Ventajas</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section"><h4 class="text-white font-semibold mb-4 uppercase tracking-wider">Empresa</h4>
+                        <ul class="space-y-2">
+                            <li><a href="sobre-nosotros.html" class="text-gray-400 hover:text-white transition-colors">Sobre nosotros</a></li>
+                            <li><a href="contacto.html" class="text-gray-400 hover:text-white transition-colors">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section"><h4 class="text-white font-semibold mb-4 uppercase tracking-wider">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="aviso-de-privacidad.html" class="text-gray-400 hover:text-white transition-colors">Política de privacidad</a></li>
+                            <li><a href="terminos.html" class="text-gray-400 hover:text-white transition-colors">Términos y condiciones</a></li>
+                            <li><a href="aviso-legal.html" class="text-gray-400 hover:text-white transition-colors">Aviso legal</a></li>
+                            <li><a href="cookies.html" class="text-gray-400 hover:text-white transition-colors">Política de cookies</a></li>
+                            <li><a href="reembolsos.html" class="text-gray-400 hover:text-white transition-colors">Política de reembolsos</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom border-t border-gray-800 pt-8">
+                    <div class="text-center space-y-4">
+                        <div class="text-gray-400 text-sm max-w-4xl mx-auto leading-relaxed">
+                            <p class="mb-3">
+                                <strong>Aviso Legal:</strong> ScoreMX proporciona servicios de orientación y análisis informativo basados en datos proporcionados por el usuario y en fuentes públicas. No somos una agencia de reportes de crédito, ni una entidad financiera regulada. No tenemos acceso a información confidencial de Buró de Crédito ni de Círculo de Crédito, ni modificamos puntajes oficiales. Nuestros servicios son únicamente de carácter informativo y educativo.
+                            </p>
+                            <p class="mb-3">
+                                <strong>Ubicación:</strong> ScoreMX cuenta con sede operativa en Estados Unidos y presta servicios informativos a clientes en México y a hispanohablantes residentes en Norteamérica.
+                            </p>
+                            <p class="mb-3">
+                                <strong>Descargo de Responsabilidad:</strong> La información proporcionada no constituye asesoramiento financiero, legal o crediticio profesional. Los resultados y recomendaciones son de carácter general, pueden no reflejar su situación crediticia real y no garantizamos mejoras específicas en el puntaje. Recomendamos consultar con profesionales financieros calificados antes de tomar decisiones crediticias importantes.
+                            </p>
+                            <p>
+                                <strong>Información Regulatoria:</strong> Este sitio web opera como plataforma informativa. No realizamos reportes de crédito oficiales ni otorgamos préstamos. Para información oficial y actualizada sobre su historial crediticio, contacte directamente a las agencias de reportes de crédito autorizadas en México, como Buró de Crédito o Círculo de Crédito.
+                            </p>
+                        </div>
+                        <p class="text-gray-400 text-sm">
+                            © 2025 ScoreMX. US Headquarters: Miami, FL, USA | Mexico Office: Ciudad de México, México | 
+                            Todos los derechos reservados. Este sitio ofrece únicamente servicios de orientación informativa, 
+                            sin carácter oficial ni vinculante.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="fixed inset-x-0 bottom-0 z-[100] bg-black/95 border-t border-gray-800 shadow-2xl hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-5 max-h-[80vh] overflow-y-auto">
+            <div class="grid grid-cols-1 md:grid-cols-[1fr,240px] gap-4 md:gap-6 items-start">
+                <div class="text-gray-300 text-sm md:text-base leading-relaxed">
+                    <h3 class="text-white font-semibold mb-2">Aviso sobre uso de cookies</h3>
+                    <p class="mb-3">
+                        Este sitio web utiliza cookies y tecnologías similares para garantizar su funcionamiento correcto, mejorar la experiencia del usuario y, previo consentimiento, realizar mediciones de uso, personalizar contenidos y mostrar publicidad basada en intereses.
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-300 mb-3">
+                        <li><span class="font-medium">Estrictamente necesarias:</span> imprescindibles para permitir la navegación y el uso de funciones básicas del sitio.</li>
+                        <li><span class="font-medium">De preferencias:</span> guardan configuraciones y opciones personalizadas (por ejemplo, idioma o región).</li>
+                        <li><span class="font-medium">Analíticas o de medición:</span> recopilan datos anónimos sobre el uso del sitio para mejorar su rendimiento y servicios.</li>
+                        <li><span class="font-medium">De marketing:</span> permiten mostrar publicidad relevante en este y otros sitios, basada en tu comportamiento de navegación.</li>
+                    </ul>
+                    <p class="mb-2">No instalaremos cookies no esenciales sin tu consentimiento expreso. Puedes aceptar todas, rechazarlas o configurar tus preferencias en cualquier momento mediante el enlace «Preferencias de cookies» disponible en el pie de página.</p>
+                    <p class="text-gray-400">Para más información, consulta la <a href="cookies.html" class="underline hover:text-white">Política de cookies</a> y el <a href="aviso-de-privacidad.html" class="underline hover:text-white">Aviso de privacidad</a>.</p>
+                </div>
+                <div class="flex flex-col gap-2 sm:gap-3 md:border-l md:border-gray-800 md:pl-6 w-full md:w-[240px] md:justify-start items-stretch">
+                    <button type="button" class="cookie-reject btn-outline w-full px-4 sm:px-5 py-2 text-sm sm:text-base rounded-lg border border-gray-700 text-gray-200 hover:bg-gray-800">Rechazar</button>
+                    <button type="button" class="cookie-settings btn-outline w-full px-4 sm:px-5 py-2 text-sm sm:text-base rounded-lg border border-gray-700 text-gray-200 hover:bg-gray-800">Configurar</button>
+                    <button type="button" class="cookie-accept btn-primary w-full px-4 sm:px-5 py-2 text-sm sm:text-base rounded-lg">Aceptar todas</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Settings Modal -->
+    <div id="cookie-modal" class="fixed inset-0 z-[110] hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+                       <div role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title"
+                    class="relative max-w-3xl mx-auto mt-20 bg-cursor-black border border-gray-800 rounded-2xl shadow-2xl overflow-hidden">
+            <div class="px-6 py-5 border-b border-gray-800 flex items-center justify-between">
+                <h3 id="cookie-modal-title" class="text-xl font-semibold">Preferencias de cookies</h3>
+                <button type="button" class="cookie-modal-close text-gray-400 hover:text-white">✕</button>
+            </div>
+            <div class="px-6 py-5 space-y-6 text-gray-300">
+                <p class="text-sm leading-relaxed">
+                    Administras cómo usamos las cookies. Las «estrictamente necesarias» se colocan para proveer el servicio y no requieren consentimiento. Las demás categorías solo se activan si las autorizas. Puedes cambiar tu decisión en cualquier momento desde «Preferencias de cookies» en el pie de página. Este tratamiento se realiza de conformidad con la normativa aplicable (por ejemplo, GDPR/UE, LGPD/BR y la Ley Federal de Protección de Datos Personales en Posesión de los Particulares – LFPDPPP/MX).
+                </p>
+                <div class="space-y-5">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="cc-necessary" checked disabled class="mt-1 accent-gray-500">
+                        <div>
+                            <label for="cc-necessary" class="font-medium">Estrictamente necesarias</label>
+                            <p class="text-sm text-gray-400">Imprescindibles para que el sitio funcione y para mantener tu sesión y
+                                seguridad. No se pueden desactivar.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="cc-preferences" class="mt-1 accent-purple-500">
+                        <div>
+                            <label for="cc-preferences" class="font-medium">Preferencias</label>
+                            <p class="text-sm text-gray-400">Memorizan tus elecciones (por ejemplo, idioma) para ofrecer una
+                                experiencia coherente.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="cc-analytics" class="mt-1 accent-blue-500">
+                        <div>
+                            <label for="cc-analytics" class="font-medium">Medición y analíticas</label>
+                            <p class="text-sm text-gray-400">Nos ayudan a entender el uso del sitio (p. ej., páginas visitadas, tiempo),
+                                de forma agregada. No instalamos estas cookies sin tu consentimiento.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="cc-marketing" class="mt-1 accent-pink-500">
+                        <div>
+                            <label for="cc-marketing" class="font-medium">Marketing</label>
+                            <p class="text-sm text-gray-400">Usadas para personalizar mensajes o medir campañas. Solo se activan si lo
+                                autorizas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="px-6 py-5 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-end gap-3 bg-black/40">
+                <button type="button" class="cookie-modal-reject btn-outline px-5 py-2 rounded-lg border border-gray-700 text-gray-200 hover:bg-gray-800 w-full sm:w-auto">Rechazar todas</button>
+                <button type="button" class="cookie-modal-accept btn-primary px-5 py-2 rounded-lg w-full sm:w-auto">Aceptar todas</button>
+                <button type="button" class="cookie-modal-save btn-outline px-5 py-2 rounded-lg border border-gray-700 text-gray-200 hover:bg-gray-800 w-full sm:w-auto">Guardar preferencias</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    
+    <!-- Page-specific JavaScript -->
+    <script>
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetTab = btn.getAttribute('data-tab');
+                    
+                    // Remove active class and styling from all buttons and panes
+                    tabBtns.forEach(b => {
+                        b.classList.remove('active');
+                        b.classList.remove('text-white', 'bg-white/10', 'border', 'border-gray-800', 'shadow-lg');
+                        b.classList.add('text-gray-400');
+                    });
+                    tabPanes.forEach(p => p.classList.add('hidden'));
+                    
+                    // Add active class and styling to clicked button and show target pane
+                    btn.classList.add('active');
+                    btn.classList.remove('text-gray-400');
+                    btn.classList.add('text-white', 'bg-white/10', 'border', 'border-gray-800', 'shadow-lg');
+                    document.getElementById(targetTab).classList.remove('hidden');
+                });
+            });
+
+            // FAQ functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const icon = question.querySelector('svg');
+                    
+                    // Toggle answer visibility
+                    if (answer.style.display === 'block') {
+                        answer.style.display = 'none';
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        answer.style.display = 'block';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+
+            // Form submission
+            const form = document.querySelector('form');
+            if (form) {
+                // Real-time validation feedback
+                const requiredFields = form.querySelectorAll('[required]');
+                const checkboxes = form.querySelectorAll('input[type="checkbox"][required]');
+                
+                // Add input event listeners for real-time validation
+                requiredFields.forEach(field => {
+                    if (field.type !== 'checkbox') {
+                        field.addEventListener('input', function() {
+                            if (this.value.trim()) {
+                                this.classList.remove('border-red-500');
+                            } else {
+                                this.classList.add('border-red-500');
+                            }
+                        });
+                    }
+                });
+                
+                // Add change event listeners for checkboxes
+                checkboxes.forEach(checkbox => {
+                    checkbox.addEventListener('change', function() {
+                        if (this.checked) {
+                            this.classList.remove('border-red-500');
+                            const label = this.parentElement.querySelector('label');
+                            if (label) {
+                                label.classList.remove('text-red-400');
+                            }
+                        } else {
+                            this.classList.add('border-red-500');
+                            const label = this.parentElement.querySelector('label');
+                            if (label) {
+                                label.classList.add('text-red-400');
+                            }
+                        }
+                    });
+                });
+                
+                // Remove error message when user starts typing/checking
+                const removeErrorOnInput = () => {
+                    const errorMessage = form.querySelector('.bg-red-900\\/30');
+                    if (errorMessage) {
+                        errorMessage.remove();
+                    }
+                };
+                
+                requiredFields.forEach(field => {
+                    if (field.type !== 'checkbox') {
+                        field.addEventListener('input', removeErrorOnInput);
+                    }
+                });
+                
+                checkboxes.forEach(checkbox => {
+                    checkbox.addEventListener('change', removeErrorOnInput);
+                });
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Enhanced form validation
+                    const requiredFields = form.querySelectorAll('[required]');
+                    const checkboxes = form.querySelectorAll('input[type="checkbox"][required]');
+                    let isValid = true;
+                    
+                    // Clear previous error styling
+                    form.querySelectorAll('.border-red-500').forEach(field => {
+                        field.classList.remove('border-red-500');
+                    });
+                    
+                    // Validate required text fields
+                    requiredFields.forEach(field => {
+                        if (field.type !== 'checkbox' && !field.value.trim()) {
+                            isValid = false;
+                            field.classList.add('border-red-500');
+                        }
+                    });
+                    
+                    // Validate required checkboxes
+                    checkboxes.forEach(checkbox => {
+                        if (!checkbox.checked) {
+                            isValid = false;
+                            checkbox.classList.add('border-red-500');
+                            // Also highlight the label
+                            const label = checkbox.parentElement.querySelector('label');
+                            if (label) {
+                                label.classList.add('text-red-400');
+                            }
+                        } else {
+                            // Remove error styling from label
+                            const label = checkbox.parentElement.querySelector('label');
+                            if (label) {
+                                label.classList.remove('text-red-400');
+                            }
+                        }
+                    });
+                    
+                    if (isValid) {
+                        // Show success message with legally correct phrasing
+                        const formContainer = form.parentElement;
+                        formContainer.innerHTML = `
+                            <div class="text-center py-8 sm:py-12">
+                                <div class="mb-6">
+                                    <svg class="w-16 h-16 text-green-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">Solicitud recibida exitosamente</h3>
+                                    <p class="text-gray-300 text-sm sm:text-base mb-6">
+                                        Hemos recibido tu solicitud para la orientación para solicitar un crédito. Nuestro equipo la revisará y se pondrá en contacto contigo en un plazo estimado de 24-48 horas hábiles.
+                                    </p>
+                                </div>
+                                
+                                <div class="bg-white/10 border border-gray-600/50 rounded-xl p-6 mb-6">
+                                    <h4 class="text-lg font-medium text-white mb-3">Confirmación de tu solicitud</h4>
+                                    <div class="space-y-2 text-sm text-gray-300">
+                                        <p><strong>Servicio solicitado:</strong> Orientación para solicitar un crédito</p>
+                                        <p><strong>Precio del servicio:</strong> $499 MXN (precio único, sin cargos ocultos)</p>
+                                        <p><strong>Tiempo de respuesta:</strong> 24-48 horas hábiles</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-gray-800/50 rounded-lg border border-gray-700 p-4">
+                                    <p class="text-xs text-gray-400 text-center">
+                                        <strong>Aviso Legal:</strong> Al enviar tu solicitud, has confirmado que entiendes que este servicio es de carácter informativo y no sustituye la evaluación oficial de una institución financiera. Tu información será tratada conforme a nuestra Política de Privacidad.
+                                    </p>
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        // Show validation error message
+                        const errorMessage = document.createElement('div');
+                        errorMessage.className = 'bg-red-900/30 border border-red-700 rounded-lg p-4 mb-4 text-red-300 text-sm';
+                        errorMessage.innerHTML = '<strong>Error de validación:</strong> Por favor, completa todos los campos obligatorios y acepta los términos requeridos.';
+                        
+                        // Remove previous error message if exists
+                        const existingError = form.querySelector('.bg-red-900\\/30');
+                        if (existingError) {
+                            existingError.remove();
+                        }
+                        
+                        // Insert error message before the form
+                        form.insertBefore(errorMessage, form.firstChild);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
