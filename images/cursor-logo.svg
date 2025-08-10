@@ -1,0 +1,6 @@
+<svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8 8C8 3.58172 11.5817 0 16 0H24C28.4183 0 32 3.58172 32 8V24C32 28.4183 28.4183 32 24 32H16C11.5817 32 8 28.4183 8 24V8Z" fill="#3B82F6"/>
+  <path d="M12 12C12 10.8954 12.8954 10 14 10H26C27.1046 10 28 10.8954 28 12V20C28 21.1046 27.1046 22 26 22H14C12.8954 22 12 21.1046 12 20V12Z" fill="white"/>
+  <path d="M16 14L20 18L16 22" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="40" y="22" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="white">Cursor</text>
+</svg>

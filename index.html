@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScoreMX - Analizar mi score Crediticio</title>
+    <link rel="stylesheet" href="./dist/output.css">
+        
+        <!-- SEO basics -->
+        <meta name="description" content="Analiza y comprende tu perfil crediticio en México. Orientación clara y práctica para tomar decisiones informadas.">
+        <meta name="keywords" content="score de crédito, perfil crediticio, orientación financiera, Buró de Crédito, México">
+        <link rel="canonical" href="https://scoremx.org/">
+        <meta name="robots" content="index,follow">
+
+        <!-- Favicons / PWA -->
+        <link rel="icon" href="./images/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+        <link rel="manifest" href="./images/site.webmanifest">
+        <meta name="theme-color" content="#0b0f14">
+
+        <!-- UX / Performance hints -->
+        <meta name="referrer" content="strict-origin-when-cross-origin">
+        <meta name="format-detection" content="telephone=no">
+        
+
+        <!-- Organization structured data -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "ScoreMX",
+          "url": "https://scoremx.org/",
+          "logo": "https://scoremx.org/images/logo.png",
+          "areaServed": ["MX","US"],
+          "contactPoint": [{
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "admin@scoremx.org",
+            "availableLanguage": ["es"]
+          }]
+        }
+        </script>
+    <style>
+      /* Helper cards visual styling – cohesive with site gradients */
+      .help-card {
+        position: relative;
+        border-radius: 1rem; /* 16px */
+        background:
+          radial-gradient(120% 80% at 10% -10%, rgba(99,102,241,0.10), rgba(99,102,241,0) 40%),
+          radial-gradient(120% 80% at 110% 10%, rgba(236,72,153,0.08), rgba(236,72,153,0) 45%),
+          linear-gradient(180deg, rgba(17,24,39,0.85), rgba(17,24,39,0.7));
+        border: 1px solid rgba(31,41,55,0.9);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.02);
+        transition: transform .25s ease, box-shadow .25s ease;
+      }
+      .help-card:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.45); }
+      .help-card::before {
+        content: "";
+        position: absolute; inset: -1px; border-radius: inherit; pointer-events: none; opacity: 0;
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899, #06b6d4);
+        -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+                mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor; mask-composite: exclude;
+        padding: 1px; /* border thickness */
+        transition: opacity .25s ease;
+      }
+      .help-card:hover::before { opacity: 1; }
+      .help-card h3 { letter-spacing: .1px; }
+      .help-card ul li { color: #d1d5db; }
+    </style>
+</head>
+<body class="bg-cursor-black text-cursor-white font-body">
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-xl border-b border-gray-800 transition-all duration-300">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <img src="./images/logo.webp" alt="ScoreMX" class="h-8">
+                </div>
+
+                <!-- Navigation Menu -->
+                <div class="nav-menu hidden md:flex space-x-8">
+                    <a href="index.html" class="btn-text">Inicio</a>
+                    
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <button class="btn-text flex items-center space-x-1">
+                            <span>Servicios</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-gray-900 border border-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-2">
+                                <a href="revision-score.html" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 transition-colors">
+                                    Analizar mi score
+                                </a>
+                                <a href="preparacion-perfil.html" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 transition-colors">
+                                    Orientación para mi perfil
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="ventajas.html" class="btn-text">Ventajas</a>
+                    <a href="sobre-nosotros.html" class="btn-text">Sobre nosotros</a>
+                    <a href="contacto.html" class="btn-text">Contacto</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="mobile-menu-btn p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-800 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay fixed inset-0 bg-black/95 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="flex flex-col h-full">
+            <div class="flex justify-between items-center p-4 border-b border-gray-800">
+                <img src="./images/logo.webp" alt="ScoreMX" class="h-8">
+                <button class="mobile-menu-close p-2 rounded-md text-gray-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav class="flex-1 px-4 py-8">
+                <div class="space-y-6">
+                    <a href="index.html" class="block text-xl text-gray-300 hover:text-white transition-colors">Inicio</a>
+                    
+                    <!-- Mobile Services Dropdown -->
+                    <div class="mobile-services-dropdown">
+                        <button class="mobile-services-btn flex items-center justify-between w-full text-xl text-gray-300 hover:text-white transition-colors">
+                            <span>Servicios</span>
+                            <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="mobile-services-content hidden mt-4 ml-4 space-y-3">
+                            <a href="revision-score.html" class="block text-lg text-gray-400 hover:text-white transition-colors">
+                                Analizar mi score
+                            </a>
+                            <a href="preparacion-perfil.html" class="block text-lg text-gray-400 hover:text-white transition-colors">
+                                Orientación para mi perfil
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="ventajas.html" class="block text-xl text-gray-300 hover:text-white transition-colors">Ventajas</a>
+                    <a href="sobre-nosotros.html" class="block text-xl text-gray-300 hover:text-white transition-colors">Sobre nosotros</a>
+                    <a href="contacto.html" class="block text-xl text-gray-300 hover:text-white transition-colors">Contacto</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+        <div class="hero-bg absolute inset-0 bg-gradient-to-br from-cursor-black via-gray-900 to-cursor-black"></div>
+        
+        <div class="hero-content relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="hero-title text-6xl md:text-8xl font-bold mb-8 gradient-text">
+                Analiza y comprende<br>
+                <span class="gradient-text">tu perfil crediticio</span>
+            </h1>
+            <p class="hero-description text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+                Te ofrecemos herramientas y orientación para interpretar tu historial y tomar decisiones financieras con más claridad.
+            </p>
+            
+            <div class="hero-actions flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                <a href="index.html#revision-score" class="btn-primary text-lg px-8 py-4">
+                    Analizar mi score
+                </a>
+                <a href="index.html#preparacion-perfil" class="btn-outline text-lg px-8 py-4">
+                    Orientación para mi perfil
+                </a>
+            </div>
+
+            <!-- Trusted By Section -->
+            <div class="trusted-by">
+                <p class="text-gray-400 text-sm uppercase tracking-wider mb-8">Usado por profesionales en todo México</p>
+                <div class="company-logos grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 justify-items-center items-center mb-8">
+                    <img 
+                        src="./images/logos/zenqor.webp" 
+                        alt='Logo ficticio "ZENQOR"' 
+                        width="160" 
+                        height="60" 
+                        loading="lazy" 
+                        decoding="async" 
+                        draggable="false"
+                        class="h-8 sm:h-10 md:h-12 opacity-60 hover:opacity-100 transition-all duration-300 select-none"
+                        style="user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
+                    <img 
+                        src="./images/logos/travera.webp" 
+                        alt='Logo ficticio "TRAVERA"' 
+                        width="160" 
+                        height="60" 
+                        loading="lazy" 
+                        decoding="async" 
+                        draggable="false"
+                        class="h-8 sm:h-10 md:h-12 opacity-60 hover:opacity-100 transition-all duration-300 select-none"
+                        style="user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
+                    <img 
+                        src="./images/logos/fynora.webp" 
+                        alt='Logo ficticio "FYNORA"' 
+                        width="160" 
+                        height="60" 
+                        loading="lazy" 
+                        decoding="async" 
+                        draggable="false"
+                        class="h-8 sm:h-10 md:h-12 opacity-60 hover:opacity-100 transition-all duration-300 select-none"
+                        style="user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
+                    <img 
+                        src="./images/logos/orbion.webp" 
+                        alt='Logo ficticio "ORBION"' 
+                        width="160" 
+                        height="60" 
+                        loading="lazy" 
+                        decoding="async" 
+                        draggable="false"
+                        class="h-8 sm:h-10 md:h-12 opacity-60 hover:opacity-100 transition-all duration-300 select-none"
+                        style="user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
+                    <img 
+                        src="./images/logos/vireno.webp" 
+                        alt='Logo ficticio "VIRENO"' 
+                        width="160" 
+                        height="60" 
+                        loading="lazy" 
+                        decoding="async" 
+                        draggable="false"
+                        class="h-8 sm:h-10 md:h-12 opacity-60 hover:opacity-100 transition-all duration-300 select-none"
+                        style="user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
+                    <img 
+                        src="./images/logos/velument.webp" 
+                        alt='Logo ficticio "VELUMENT"' 
+                        width="160" 
+                        height="60" 
+                        loading="lazy" 
+                        decoding="async" 
+                        draggable="false"
+                        class="h-8 sm:h-10 md:h-12 opacity-60 hover:opacity-100 transition-all duration-300 select-none"
+                        style="user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
+                    <img 
+                        src="./images/logos/lumora.webp" 
+                        alt='Logo ficticio "LUMORA"' 
+                        width="160" 
+                        height="60" 
+                        loading="lazy" 
+                        decoding="async" 
+                        draggable="false"
+                        class="h-8 sm:h-10 md:h-12 opacity-60 hover:opacity-100 transition-all duration-300 select-none"
+                        style="user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
+                    <img 
+                        src="./images/logos/kayro.webp" 
+                        alt='Logo ficticio "KAYRO"' 
+                        width="160" 
+                        height="60" 
+                        loading="lazy" 
+                        decoding="async" 
+                        draggable="false"
+                        class="h-8 sm:h-10 md:h-12 opacity-60 hover:opacity-100 transition-all duration-300 select-none"
+                        style="user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilidad de uso Section -->
+    <section class="facilidad-uso section-border py-24 bg-cursor-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-header text-center mb-8 sm:mb-12 lg:mb-16">
+                    <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text font-display">
+                    Todo claro y sin complicaciones
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-300 max-w-2xl sm:max-w-3xl mx-auto">
+                    Nuestra plataforma está diseñada para que obtengas la información que necesitas de forma rápida y sin términos confusos.
+                </p>
+            </div>
+            
+            <div class="facilidad-content">
+                <div class="cursor-style-container bg-gradient-to-br from-purple-600/90 via-pink-500/90 to-orange-500/90 rounded-3xl px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 pb-0 border border-gray-800/50 backdrop-blur-sm max-w-4xl mx-auto">
+                    <div class="image-container flex justify-center">
+                        <div class="bg-black/95 backdrop-blur-xl rounded-2xl shadow-2xl">
+                            <img src="./images/blog1.webp" alt="Dashboard ScoreMX" class="max-w-lg w-full h-auto rounded-xl" style="filter: brightness(0.9) contrast(1.1);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recomendaciones Section -->
+    <section class="recomendaciones section-border py-24 bg-cursor-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-header text-center mb-8 sm:mb-12 lg:mb-16">
+                    <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text font-display">
+                    Recibe orientación adaptada a ti
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-300 max-w-2xl sm:max-w-3xl mx-auto">
+                    Te ayudamos a identificar acciones y oportunidades para fortalecer tu perfil crediticio antes de solicitar un crédito.
+                </p>
+            </div>
+            
+            <div class="recomendaciones-content">
+                <div class="cursor-style-container bg-gradient-to-br from-blue-600/90 via-cyan-500/90 to-teal-500/90 rounded-3xl px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 pb-0 border border-gray-800/50 backdrop-blur-sm max-w-4xl mx-auto">
+                    <div class="image-container flex justify-center">
+                        <div class="bg-black/95 backdrop-blur-xl rounded-2xl shadow-2xl">
+                            <img src="./images/blog2.webp" alt="Orientación personalizada ScoreMX" class="max-w-lg w-full h-auto rounded-xl" style="filter: brightness(0.9) contrast(1.1);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seguridad Section -->
+    <section class="seguridad section-border py-24 bg-cursor-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-header text-center mb-8 sm:mb-12 lg:mb-16">
+                    <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text font-display">
+                    Tu información, siempre protegida
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-300 max-w-2xl sm:max-w-3xl mx-auto">
+                    Manejamos tus datos con estricta confidencialidad y en entornos seguros, sin compartirlos con terceros no autorizados.
+                </p>
+            </div>
+            
+            <div class="seguridad-content">
+                <div class="cursor-style-container bg-gradient-to-br from-green-600/90 via-emerald-500/90 to-blue-500/90 rounded-3xl px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 pb-0 border border-gray-800/50 backdrop-blur-sm max-w-4xl mx-auto">
+                    <div class="image-container flex justify-center">
+                        <div class="bg-black/95 backdrop-blur-xl rounded-2xl shadow-2xl">
+                            <img src="./images/blog3.webp" alt="Seguridad y privacidad ScoreMX" class="max-w-lg w-full h-auto rounded-xl" style="filter: brightness(0.9) contrast(1.1);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section section-border py-24 bg-cursor-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row justify-between items-start mb-16">
+                <div class="lg:w-2/3">
+                    <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text font-display">
+                        Nuestros Servicios
+                    </h2>
+                    <p class="text-xl text-gray-300 max-w-3xl">
+                        Te ofrecemos orientación y herramientas para comprender tu perfil crediticio.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Services Grid -->
+            <div class="services-scroll overflow-x-auto overflow-y-hidden">
+                <div class="services-grid grid grid-cols-3 gap-2 sm:gap-8 min-w-[994px] sm:min-w-[1042px]">
+                <a id="revision-score" href="revision-score.html" class="service-item block bg-white/5 rounded-2xl border border-gray-800 hover:border-gradient-animated transition-all duration-300">
+                    <div class="service-card p-8">
+                        <h3 class="text-2xl font-bold mb-2">Análisis rápido</h3>
+                        <h3 class="text-2xl font-bold mb-4">de score</h3>
+                        <p class="text-gray-300 mb-6">
+                            Consulta tu puntaje estimado y factores clave, con referencia a datos públicos de Buro de Crédito para orientación.
+                        </p>
+                    </div>
+                    <div class="service-icon-container -mb-8 pt-8">
+                        <div class="service-icon w-full flex items-center justify-center">
+                            <svg viewBox="50 50 412 412" width="330" height="330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract prism with floating cubes">
+                                <defs>
+                                <!-- градиенты для граней -->
+                                <linearGradient id="g-top" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0" stop-color="#a0ff6f"/>
+                                    <stop offset="1" stop-color="#67e8f9"/>
+                                </linearGradient>
+                                <linearGradient id="g-left" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0" stop-color="#ff5ea8"/>
+                                    <stop offset="1" stop-color="#7c3aed"/>
+                                </linearGradient>
+                                <linearGradient id="g-right" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0" stop-color="#22d3ee"/>
+                                    <stop offset="1" stop-color="#3b82f6"/>
+                                </linearGradient>
+                            
+                                <!-- лёгкое свечение -->
+                                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feGaussianBlur stdDeviation="6" result="b"/>
+                                    <feMerge>
+                                    <feMergeNode in="b"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            
+                                <!-- градиентная окантовка кубов -->
+                                <linearGradient id="cubeStroke" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0" stop-color="#67e8f9"/>
+                                    <stop offset="1" stop-color="#a78bfa"/>
+                                </linearGradient>
+                                </defs>
+                            
+                                <!-- фон прозрачный; если нужно черный — раскомментируй
+                                <rect width="512" height="512" fill="#0a0a0b"/>
+                                -->
+                            
+                                <!-- мягкие ореолы -->
+                                <g opacity="0.35" filter="url(#glow)">
+                                <ellipse cx="256" cy="330" rx="160" ry="70" fill="#3b82f6"/>
+                                <ellipse cx="256" cy="200" rx="140" ry="60" fill="#22d3ee"/>
+                                </g>
+                            
+                                <!-- трёхгранная «пирамидка» -->
+                                <!-- верхняя грань -->
+                                <polygon points="176,210 336,210 256,250" fill="url(#g-top)"/>
+                                <!-- левая грань -->
+                                <polygon points="176,210 256,250 256,360 210,320" fill="url(#g-left)"/>
+                                <!-- правая грань -->
+                                <polygon points="336,210 256,250 256,360 302,320" fill="url(#g-right)"/>
+                            
+                                <!-- тонкая тень под фигурой -->
+                                <ellipse cx="256" cy="372" rx="70" ry="16" fill="#000" opacity="0.55"/>
+                            
+                                <!-- парящие кубы (абстрактные) -->
+                                <g opacity="0.9">
+                                <!-- левый верхний -->
+                                <g transform="translate(96,120) rotate(-10)">
+                                    <rect x="-24" y="-24" width="48" height="48" rx="4" fill="#11151a" stroke="url(#cubeStroke)" stroke-width="1.5"/>
+                                    <rect x="-18" y="-18" width="36" height="36" rx="3" fill="#0b0f14"/>
+                                </g>
+                                <!-- правый средний -->
+                                <g transform="translate(408,250) rotate(8)">
+                                    <rect x="-32" y="-32" width="64" height="64" rx="6" fill="#11151a" stroke="url(#cubeStroke)" stroke-width="1.5"/>
+                                    <rect x="-24" y="-24" width="48" height="48" rx="4" fill="#0b0f14"/>
+                                </g>
+                                <!-- левый нижний -->
+                                <g transform="translate(148,388) rotate(6)">
+                                    <rect x="-36" y="-36" width="72" height="72" rx="8" fill="#11151a" stroke="url(#cubeStroke)" stroke-width="1.5"/>
+                                    <rect x="-28" y="-28" width="56" height="56" rx="6" fill="#0b0f14"/>
+                                </g>
+                                <!-- верхний дальний -->
+                                <g transform="translate(328,96) scale(0.7)">
+                                    <rect x="-24" y="-24" width="48" height="48" rx="5" fill="#13161c" stroke="url(#cubeStroke)" stroke-width="1.2" opacity="0.8"/>
+                                    <rect x="-18" y="-18" width="36" height="36" rx="4" fill="#0b0f14" opacity="0.9"/>
+                                </g>
+                                </g>
+                            </svg>
+                            
+                        </div>
+                    </div>
+                </a>
+
+                <a id="preparacion-perfil" href="preparacion-perfil.html" class="service-item block bg-white/5 rounded-2xl border border-gray-800 hover:border-gradient-animated transition-all duration-300">
+                    <div class="service-card p-8">
+                        <h3 class="text-2xl font-bold mb-2">Plan de orientación</h3>
+                        <h3 class="text-2xl font-bold mb-4">para tu perfil</h3>
+                        <p class="text-gray-300 mb-6">
+                            Recibe recomendaciones personalizadas para mejorar tu perfil antes de acudir a instituciones financieras, usando información pública de Buro de Crédito.
+                        </p>
+                    </div>
+                    <div class="service-icon-container -mb-8 pt-8">
+                        <div class="service-icon w-full flex items-center justify-center">
+                            <svg viewBox="50 60 380 380" width="330" height="300"
+                            xmlns="http://www.w3.org/2000/svg"
+                            aria-label="Five connected neon spheres around a central orb"
+                            shape-rendering="geometricPrecision">
+                         <defs>
+                           <!-- голографический градиент шара -->
+                           <radialGradient id="orbGrad" cx="35%" cy="30%" r="75%">
+                             <stop offset="0"   stop-color="#fff6b8"/>
+                             <stop offset=".25" stop-color="#ffd36a"/>
+                             <stop offset=".48" stop-color="#ff7ec3"/>
+                             <stop offset=".68" stop-color="#a88bff"/>
+                             <stop offset=".85" stop-color="#66e7ff"/>
+                             <stop offset="1"   stop-color="#38e2a1"/>
+                           </radialGradient>
+                       
+                           <!-- контур/линии -->
+                           <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="1">
+                             <stop offset="0"   stop-color="#67e8f9"/>
+                             <stop offset=".5"  stop-color="#a78bfa"/>
+                             <stop offset="1"   stop-color="#ff74c8"/>
+                           </linearGradient>
+                       
+                           <!-- мягкая подсветка (меньше блюр!) -->
+                           <filter id="softSmall" x="-40%" y="-40%" width="180%" height="180%">
+                             <feGaussianBlur stdDeviation="2.2"/>
+                           </filter>
+                       
+                           <!-- спекулярный блик внутри сферы -->
+                           <radialGradient id="spec" cx="28%" cy="22%" r="35%">
+                             <stop offset="0" stop-color="#ffffff" stop-opacity=".55"/>
+                             <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+                           </radialGradient>
+                       
+                           <!-- “пол” под центром (умеренный блюр) -->
+                           <filter id="floor" x="-50%" y="-50%" width="200%" height="200%">
+                             <feGaussianBlur stdDeviation="8"/>
+                           </filter>
+                         </defs>
+                       
+                         <!-- сцена -->
+                         <g transform="translate(240,240)">
+                           <!-- пятиугольник: соединительные линии (чуть толще для чёткости) -->
+                           <g stroke="url(#lineGrad)" stroke-width="3.6" stroke-linecap="round" fill="none" opacity="0.9">
+                             <polyline points="0,-150 142.658,-46.352 88.167,121.352 -88.167,121.352 -142.658,-46.352 0,-150"/>
+                           </g>
+                       
+                           <!-- внешние сферы (без blur на самих шарах) -->
+                           <g>
+                             <!-- top -->
+                             <g transform="translate(0,-150)">
+                               <circle r="22" fill="url(#orbGrad)"/>
+                               <circle r="18" fill="url(#spec)"/>
+                             </g>
+                             <!-- right-top -->
+                             <g transform="translate(142.658,-46.352)">
+                               <circle r="22" fill="url(#orbGrad)"/>
+                               <circle r="18" fill="url(#spec)"/>
+                             </g>
+                             <!-- right-bottom -->
+                             <g transform="translate(88.167,121.352)">
+                               <circle r="22" fill="url(#orbGrad)"/>
+                               <circle r="18" fill="url(#spec)"/>
+                             </g>
+                             <!-- left-bottom -->
+                             <g transform="translate(-88.167,121.352)">
+                               <circle r="22" fill="url(#orbGrad)"/>
+                               <circle r="18" fill="url(#spec)"/>
+                             </g>
+                             <!-- left-top -->
+                             <g transform="translate(-142.658,-46.352)">
+                               <circle r="22" fill="url(#orbGrad)"/>
+                               <circle r="18" fill="url(#spec)"/>
+                             </g>
+                           </g>
+                       
+                           <!-- центральный шар + аккуратная подсветка -->
+                           <ellipse cx="0" cy="78" rx="70" ry="16" fill="#000" opacity=".45" filter="url(#floor)"/>
+                           <ellipse cx="0" cy="78" rx="78" ry="18" fill="#67e8f9" opacity=".12" filter="url(#floor)"/>
+                       
+                           <g>
+                             <circle r="64" fill="url(#orbGrad)"/>
+                             <circle r="48" fill="url(#spec)" opacity=".8"/>
+                             <!-- тонкое внешнее свечение по контуру для “неона” -->
+                             <circle r="64" fill="none" stroke="url(#lineGrad)" stroke-width="1.8" opacity=".45" filter="url(#softSmall)"/>
+                           </g>
+                         </g>
+                       </svg>
+                       
+
+  
+
+
+                        </div>
+                    </div>
+                </a>
+
+                <a href="ventajas.html" class="service-item block bg-white/5 rounded-2xl border border-gray-800 hover:border-gradient-animated transition-all duration-300">
+                    <div class="service-card p-8">
+                        <h3 class="text-2xl font-bold mb-2">Conoce todas</h3>
+                        <h3 class="text-2xl font-bold mb-4">nuestras ventajas</h3>
+                        <p class="text-gray-300 mb-6">
+                            Descubre cómo nuestras herramientas te ayudan a entender y gestionar mejor tu perfil crediticio.
+                        </p>
+                    </div>
+                    <div class="service-icon-container -mb-8 pt-8">
+                        <div class="service-icon w-full flex items-center justify-center">
+                            <!-- Complex 3D Lightning/Energy Graphic -->
+                            <!--<svg class="w-full h-80" viewBox="0 0 96 96" fill="none" preserveAspectRatio="xMidYMid meet">
+                                <defs>
+                                    <linearGradient id="energyGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+                                        <stop offset="50%" style="stop-color:#059669;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+                                    </linearGradient>
+                                    <linearGradient id="energyGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+                                        <stop offset="50%" style="stop-color:#10B981;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+                                    </linearGradient>
+                                    <radialGradient id="energyGlow" cx="50%" cy="50%" r="50%">
+                                        <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:0.8" />
+                                        <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:0" />
+                                    </radialGradient>
+                                </defs>
+                                <polygon points="48,15 68,25 68,45 48,55 28,45 28,25" fill="url(#energyGradient1)" opacity="0.9"/>
+                                <circle cx="48" cy="35" r="12" fill="url(#energyGradient2)" opacity="0.9"/>
+                                <circle cx="48" cy="35" r="18" fill="url(#energyGlow)" opacity="0.4"/>
+                                <path d="M48 20 L52 30 L48 35 L44 30 Z" fill="#F59E0B" opacity="0.9"/>
+                                <path d="M48 50 L52 40 L48 35 L44 40 Z" fill="#10B981" opacity="0.9"/>
+                                <circle cx="48" cy="35" r="8" stroke="#F59E0B" stroke-width="1" opacity="0.6" fill="none"/>
+                                <circle cx="48" cy="35" r="14" stroke="#10B981" stroke-width="1" opacity="0.4" fill="none"/>
+                            </svg>-->
+                            <!-- Hex orb — glossy hexagon + neon sphere, no text -->
+                            <svg viewBox="0 0 512 512" width="330" height="330"
+                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Glossy hexagon with neon orb">
+                                <defs>
+
+                                    <linearGradient id="hexFace" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0"  stop-color="#161a21"/>
+                                        <stop offset=".6" stop-color="#0f1319"/>
+                                        <stop offset="1"  stop-color="#0b0f14"/>
+                                    </linearGradient>
+
+                                    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0" stop-color="#ffffff" stop-opacity=".18"/>
+                                        <stop offset="1" stop-color="#ffffff" stop-opacity=".04"/>
+                                    </linearGradient>
+
+                                    <!-- glossy highlight for faces -->
+                                    <linearGradient id="glassSheen" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0" stop-color="#ffffff" stop-opacity=".10"/>
+                                        <stop offset=".45" stop-color="#ffffff" stop-opacity=".04"/>
+                                        <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+                                    </linearGradient>
+
+                                    <!-- neon orb gradient -->
+                                    <radialGradient id="orb" cx="50%" cy="45%" r="60%">
+                                        <stop offset="0"  stop-color="#fff2a8"/>
+                                        <stop offset=".25" stop-color="#ffd166"/>
+                                        <stop offset=".48" stop-color="#ff77aa"/>
+                                        <stop offset=".7"  stop-color="#a78bfa"/>
+                                        <stop offset=".88" stop-color="#67e8f9"/>
+                                        <stop offset="1"  stop-color="#37e3a3"/>
+                                    </radialGradient>
+
+                                    <!-- soft glows -->
+                                    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+                                        <feGaussianBlur stdDeviation="6" result="b"/>
+                                        <feMerge>
+                                            <feMergeNode in="b"/>
+                                            <feMergeNode in="SourceGraphic"/>
+                                        </feMerge>
+                                    </filter>
+                                    <filter id="ringGlow" x="-50%" y="-50%" width="200%" height="200%">
+                                        <feGaussianBlur stdDeviation="2" result="g"/>
+                                        <feMerge>
+                                            <feMergeNode in="g"/>
+                                            <feMergeNode in="SourceGraphic"/>
+                                        </feMerge>
+                                    </filter>
+                                </defs>
+
+                                <!-- HEXAGON base (three large faces to имитировать объём) -->
+                                <!-- coordinates for regular hexagon -->
+                                <g transform="translate(256,260)">
+                                    <!-- back shadow -->
+                                    <polygon points="0,-206 178,-103 178,103 0,206 -178,103 -178,-103"
+                                            fill="#000" opacity=".35" filter="url(#soft)" transform="translate(0,6)"/>
+
+                                    <!-- left face -->
+                                    <polygon points="0,-206 -178,-103 -178,103 0,206"
+                                            fill="url(#hexFace)"/>
+                                    <!-- top-right face -->
+                                    <polygon points="0,-206 178,-103 0,0 -178,-103"
+                                            fill="#12161d"/>
+                                    <!-- bottom-right face -->
+                                    <polygon points="0,206 178,103 178,-103 0,0 -178,103"
+                                            fill="#0e1218"/>
+
+                                    <!-- edges (subtle) -->
+                                    <polyline points="0,-206 178,-103 178,103 0,206 -178,103 -178,-103 0,-206"
+                                            fill="none" stroke="url(#edge)" stroke-width="2"/>
+
+                                    <!-- glass sheen on faces -->
+                                    <polygon points="0,-206 -178,-103 -178,103 0,206" fill="url(#glassSheen)"/>
+                                    <polygon points="0,-206 178,-103 0,0 -178,-103" fill="url(#glassSheen)" opacity=".6"/>
+                                    <polygon points="0,206 178,103 178,-103 0,0 -178,103" fill="url(#glassSheen)" opacity=".35"/>
+
+                                    <!-- ORB -->
+                                    <g>
+                                        <circle cx="0" cy="0" r="86" fill="url(#orb)"/>
+                                        <!-- inner shadow at bottom to seat the orb -->
+                                        <ellipse cx="0" cy="70" rx="60" ry="14" fill="#000" opacity=".5"/>
+
+                                        <!-- orbital rings -->
+                                        <g stroke="#b084ff" stroke-opacity=".45" fill="none" filter="url(#ringGlow)">
+                                            <circle cx="0" cy="0" r="110" stroke-width="1.4"/>
+                                            <circle cx="0" cy="0" r="140" stroke-width="1.2" stroke-opacity=".35"/>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        
+        <!-- Disclaimer -->
+        <div class="mt-12 p-6 bg-gray-900/30 rounded-xl border border-gray-800">
+            <p class="text-gray-400 text-sm text-center">
+                <strong>Buro de Crédito es una marca registrada.</strong> Nuestra plataforma no tiene relación oficial con Buro de Crédito y utiliza únicamente información pública disponible para fines informativos.
+            </p>
+        </div>
+    </section>
+
+    <!-- Cómo te ayudamos Section -->
+    <section class="benefits section-border py-24 bg-cursor-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-header text-center mb-16">
+            <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text font-display">Cómo te ayudamos a entender tu perfil</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Nuestra plataforma ofrece orientación clara y práctica para que tomes decisiones informadas sobre tu perfil crediticio,
+                    explicando cada punto sin tecnicismos y con pasos concretos para avanzar con confianza.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="help-card p-8">
+                    <h3 class="text-2xl font-bold mb-3">Análisis claro y detallado</h3>
+                    <p class="text-gray-300 mb-5">
+                        Te presentamos un resumen estructurado de los elementos que influyen en tu puntaje y su impacto aproximado.
+                        Así podrás identificar con rapidez qué pesa más hoy en tu perfil y dónde conviene enfocarte primero.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300">
+                        <li>Resumen de factores positivos y alertas prioritarias</li>
+                        <li>Tendencias generales de tu comportamiento crediticio</li>
+                        <li>Prioridades sugeridas para actuar primero</li>
+                        <li>Contexto para interpretar cambios recientes</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="help-card p-8">
+                    <h3 class="text-2xl font-bold mb-3">Plan personalizado para tus metas</h3>
+                    <p class="text-gray-300 mb-5">
+                        Adaptamos la orientación a tu situación: si planeas solicitar una tarjeta, un préstamo o una hipoteca,
+                        te damos pasos concretos y ordenados para preparar tu perfil y presentar mejor tu historial.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300">
+                        <li>Acciones recomendadas a corto y mediano plazo</li>
+                        <li>Buenas prácticas para mantener un perfil sano</li>
+                        <li>Checklist previo a la solicitud de crédito</li>
+                        <li>Consejos para documentos y comprobantes</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="help-card p-8">
+                    <h3 class="text-2xl font-bold mb-3">Acompañamiento y claridad</h3>
+                    <p class="text-gray-300 mb-5">
+                        Mantenemos el foco en la comprensión y la transparencia: sabrás qué significa cada recomendación y por qué
+                        puede ayudarte a tomar mejores decisiones financieras en el momento adecuado.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300">
+                        <li>Explicaciones simples, sin jerga técnica</li>
+                        <li>Actualizaciones cuando cambien condiciones del mercado</li>
+                        <li>Recordatorios opcionales para tus próximos pasos</li>
+                        <li>Orientación pensada para tu contexto</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Disclaimer below cards -->
+            <div class="mt-10 text-sm text-gray-400 max-w-4xl mx-auto leading-relaxed bg-gray-900/30 rounded-xl border border-gray-800 p-4">
+                Servicios de orientación e información independientes. No realizamos reportes oficiales ni modificamos puntajes.
+                Para información oficial, acude a las agencias autorizadas (por ejemplo, Buró de Crédito o Círculo de Crédito).
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section-border py-24 bg-cursor-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-header text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text font-display">
+                    Lo que dicen nuestros clientes
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Historias reales de personas que han comprendido mejor su perfil crediticio.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Column 1 (scrolls down) -->
+                <div class="testimonials-marquee-col">
+                    <div class="testimonials-marquee-track testimonials-marquee-down space-y-8" style="--marquee-duration: 48s">
+                        <!-- primary block with 5 unique testimonials -->
+                        <div class="space-y-8">
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Entré con mil dudas sobre mi historial. Con ScoreMX entendí en minutos qué puntos revisar y qué pasos dar. No venden humo: te dicen claro lo que sí y lo que no."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-1.webp" alt="Alejandro Cruz" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Alejandro Cruz</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover-border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Ya había visto mi score en otros sitios, pero aquí entendí por qué estaba así y qué acciones me convenían. Vale la pena."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-2.webp" alt="Javier Torres" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Javier Torres</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover-border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Súper claro y rápido. En una sola sesión entendí mis puntos débiles y qué documentos preparar para no perder tiempo."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-3.webp" alt="Laura Camacho" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Laura Camacho</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover-border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"No prometen milagros, y eso me dio confianza. Me orientaron con pasos concretos que sí puedo hacer para fortalecer mi perfil."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-4.webp" alt="Rebeca Gómez" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Rebeca Gómez</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Por fin tuve claridad de qué priorizar y qué dejar para después. Muy práctico y directo."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-5.webp" alt="Sofía Navarro" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Sofía Navarro</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- duplicate for seamless loop -->
+                        <div class="space-y-8">
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                <p class="text-gray-300 text-lg relative">"Entré con mil dudas sobre mi historial. Con ScoreMX entendí en minutos qué puntos revisar y qué pasos dar. No venden humo: te dicen claro lo que sí y lo que no."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-1.webp" alt="Alejandro Cruz" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Alejandro Cruz</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover-border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                <p class="text-gray-300 text-lg relative">"Ya había visto mi score en otros sitios, pero aquí entendí por qué estaba así y qué acciones me convenían. Vale la pena."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-2.webp" alt="Javier Torres" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Javier Torres</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover-border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Súper claro y rápido. En una sola sesión entendí mis puntos débiles y qué documentos preparar para no perder tiempo."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-3.webp" alt="Laura Camacho" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Laura Camacho</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover-border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"No prometen milagros, y eso me dio confianza. Me orientaron con pasos concretos que sí puedo hacer para fortalecer mi perfil."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-4.webp" alt="Rebeca Gómez" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Rebeca Gómez</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover-border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Por fin tuve claridad de qué priorizar y qué dejar para después. Muy práctico y directo."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-5.webp" alt="Sofía Navarro" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Sofía Navarro</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2 (scrolls up) -->
+                <div class="testimonials-marquee-col">
+                    <div class="testimonials-marquee-track testimonials-marquee-up space-y-8" style="--marquee-duration: 56s">
+                        <div class="space-y-8">
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Buscaba solicitar una hipoteca y aquí entendí tiempos, requisitos y qué pasos no me convenían. Salí con un plan realista."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-6.webp" alt="Natalia Flores" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Natalia Flores</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Detecté cuentas inactivas y ajustes de límite que afectaban mi perfil. Con sus recomendaciones ordené todo sin perder semanas."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-7.webp" alt="Sergio Aguilar" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Sergio Aguilar</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Preparé mi documentación y simulé escenarios antes de ir a la sucursal. Llegué con argumentos y me fue mucho mejor."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-8.webp" alt="Karla Mendoza" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Karla Mendoza</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Aprendí cómo impactan las consultas y el uso de línea. Cambié hábitos y en poco tiempo la percepción de riesgo mejoró."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-9.webp" alt="Tomás Esquivel" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Tomás Esquivel</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Vale cada peso: en una tarde despejé dudas y me quedé con un mapa claro para los próximos meses."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-10.webp" alt="Paola Ríos" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Paola Ríos</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-8">
+                            <!-- duplicate -->
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Buscaba solicitar una hipoteca y aquí entendí tiempos, requisitos y qué pasos no me convenían. Salí con un plan realista."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-6.webp" alt="Natalia Flores" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Natalia Flores</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Detecté cuentas inactivas y ajustes de límite que afectaban mi perfil. Con sus recomendaciones ordené todo sin perder semanas."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-7.webp" alt="Sergio Aguilar" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Sergio Aguilar</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Preparé mi documentación y simulé escenarios antes de ir a la sucursal. Llegué con argumentos y me fue mucho mejor."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-8.webp" alt="Karla Mendoza" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Karla Mendoza</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Aprendí cómo impactan las consultas y el uso de línea. Cambié hábitos y en poco tiempo la percepción de riesgo mejoró."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-9.webp" alt="Tomás Esquivel" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Tomás Esquivel</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Vale cada peso: en una tarde despejé dudas y me quedé con un mapa claro para los próximos meses."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-10.webp" alt="Paola Ríos" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Paola Ríos</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3 (scrolls down) -->
+                <div class="testimonials-marquee-col">
+                    <div class="testimonials-marquee-track testimonials-marquee-down space-y-8" style="--marquee-duration: 52s">
+                        <div class="space-y-8">
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Pensé que sería otra página de puntajes, pero aquí entendí el contexto: qué miran las instituciones y cómo presentarme mejor."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-11.webp" alt="Ivanna Pérez" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Ivanna Pérez</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover-border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"El análisis fue honesto y sin adornos. Me sirvió para fijar metas realizables mes a mes."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-12.webp" alt="Marco Ruiz" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Marco Ruiz</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover-border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Buen acompañamiento: entendí mis opciones y evité errores que me habrían costado tiempo y dinero."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-13.webp" alt="Lucía Sandoval" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Lucía Sandoval</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover-border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Me ayudó a ordenar mis cuentas y preparar comprobantes. Llegué mejor armado a la cita con el asesor."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-14.webp" alt="Héctor Valdés" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Héctor Valdés</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover-border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Contenido claro, ejemplos prácticos y cero promesas raras. Así sí confío."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-15.webp" alt="Andrea Romero" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Andrea Romero</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-8">
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Pensé que sería otra página de puntajes, pero aquí entendí el contexto: qué miran las instituciones y cómo presentarme mejor."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-11.webp" alt="Ivanna Pérez" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Ivanna Pérez</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover-border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"El análisis fue honesto y sin adornos. Me sirvió para fijar metas realizables mes a mes."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-12.webp" alt="Marco Ruiz" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Marco Ruiz</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover-border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Buen acompañamiento: entendí mis opciones y evité errores que me habrían costado tiempo y dinero."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-13.webp" alt="Lucía Sandoval" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Lucía Sandoval</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover-border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Me ayudó a ordenar mis cuentas y preparar comprobantes. Llegué mejor armado a la cita con el asesor."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-14.webp" alt="Héctor Valdés" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Héctor Valdés</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover-border-gray-700 transition-all duration-300 card-hover">
+                                <div class="testimonial-content mb-6">
+                                    <p class="text-gray-300 text-lg relative">"Contenido claro, ejemplos prácticos y cero promesas raras. Así sí confío."</p>
+                                </div>
+                                <div class="author flex items-center">
+                                    <img src="./images/face-15.webp" alt="Andrea Romero" class="w-12 h-12 rounded-full border-2 border-gray-700 mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold">Andrea Romero</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta section-border py-24 bg-cursor-black">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="cta-content text-center">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold gradient-text leading-[1.05] mb-6 font-display">
+                    ¿Listo para hablar con nosotros?
+                </h2>
+                <div class="flex items-center justify-center gap-4 md:gap-6 mb-6">
+                    <a href="contacto.html" class="btn-primary text-lg px-8 py-4 whitespace-nowrap">
+                        Contáctanos
+                    </a>
+                    <img src="./images/logo.webp" alt="ScoreMX" class="h-10 md:h-12 opacity-90" loading="lazy" decoding="async">
+                </div>
+                <p class="text-base md:text-lg text-gray-300 max-w-2xl md:max-w-3xl mx-auto">
+                    Cuéntanos tu situación y te orientamos con claridad. Sin compromisos, con enfoque práctico y directo.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <<footer class="footer bg-black/95 backdrop-blur-xl py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="footer-content">
+        <div class="footer-top flex flex-col lg:flex-row justify-between items-start mb-12">
+          <div class="footer-brand mb-8 lg:mb-0">
+            <img src="./images/logo.webp" alt="ScoreMX" class="h-8 mb-4">
+            <div class="footer-contact space-y-2">
+              <div class="flex flex-col space-y-1">
+                <a href="mailto:admin@scoremx.org" class="footer-link text-gray-400 hover:text-white transition-colors duration-300 relative group">
+                  admin@scoremx.org
+                  <span class="footer-link-underline absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                  <svg class="footer-link-arrow absolute -right-6 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400 group-hover:text-white transition-colors duration-300 opacity-0 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"></path>
+                  </svg>
+                </a>
+                <a href="tel:+525416565150" class="footer-link text-gray-400 hover:text-white transition-colors duration-300 relative group">
+                  +52 54 1656 5150
+                  <span class="footer-link-underline absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                  <svg class="footer-link-arrow absolute -right-6 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400 group-hover:text-white transition-colors duration-300 opacity-0 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"></path>
+                  </svg>
+                </a>
+                <a href="tel:+13055550198" class="footer-link text-gray-400 hover:text-white transition-colors duration-300 relative group">
+                  +1 305 555 0198
+                  <span class="footer-link-underline absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                  <svg class="footer-link-arrow absolute -right-6 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400 group-hover:text-white transition-colors duration-300 opacity-0 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-language mb-8 lg:mb-0 flex items-center gap-3">
+            <button type="button" class="open-cookie-settings text-gray-400 hover:text-white transition-colors underline underline-offset-4">Preferencias de cookies</button>
+            <select class="bg-gray-800 border border-gray-700 text-white px-4 py-2 rounded-lg footer-lang-select"><option value="es">Español</option><option value="en">English</option></select>
+          </div>
+        </div>
+        <div class="footer-sections grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div class="footer-section"><h4 class="text-white font-semibold mb-4 uppercase tracking-wider">Servicios</h4>
+            <ul class="space-y-2">
+              <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Inicio</a></li>
+              <li><a href="revision-score.html" class="text-gray-400 hover:text-white transition-colors">Analizar mi score</a></li>
+              <li><a href="preparacion-perfil.html" class="text-gray-400 hover:text-white transition-colors">Orientación para mi perfil</a></li>
+              <li><a href="ventajas.html" class="text-gray-400 hover:text-white transition-colors">Ventajas</a></li>
+            </ul>
+          </div>
+          <div class="footer-section"><h4 class="text-white font-semibold mb-4 uppercase tracking-wider">Empresa</h4>
+            <ul class="space-y-2">
+              <li><a href="sobre-nosotros.html" class="text-gray-400 hover:text-white transition-colors">Sobre nosotros</a></li>
+              <li><a href="contacto.html" class="text-gray-400 hover:text-white transition-colors">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="footer-section"><h4 class="text-white font-semibold mb-4 uppercase tracking-wider">Legal</h4>
+            <ul class="space-y-2">
+              <li><a href="aviso-de-privacidad.html" class="text-gray-400 hover:text-white transition-colors">Política de privacidad</a></li>
+              <li><a href="terminos.html" class="text-gray-400 hover:text-white transition-colors">Términos y condiciones</a></li>
+              <li><a href="aviso-legal.html" class="text-gray-400 hover:text-white transition-colors">Aviso legal</a></li>
+              <li><a href="cookies.html" class="text-gray-400 hover:text-white transition-colors">Política de cookies</a></li>
+              <li><a href="reembolsos.html" class="text-gray-400 hover:text-white transition-colors">Política de reembolsos</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom border-t border-gray-800 pt-8">
+          <div class="text-center space-y-4">
+            <div class="text-gray-400 text-sm max-w-4xl mx-auto leading-relaxed">
+              <p class="mb-3">
+                <strong>Aviso Legal:</strong> ScoreMX proporciona servicios de orientación y análisis informativo basados en datos proporcionados por el usuario y en fuentes públicas. No somos una agencia de reportes de crédito, ni una entidad financiera regulada. No tenemos acceso a información confidencial de Buró de Crédito ni de Círculo de Crédito, ni modificamos puntajes oficiales. Nuestros servicios son únicamente de carácter informativo y educativo.
+              </p>
+              <p class="mb-3">
+                <strong>Ubicación:</strong> ScoreMX cuenta con sede operativa en Estados Unidos y presta servicios informativos a clientes en México y a hispanohablantes residentes en Norteamérica.
+              </p>
+              <p class="mb-3">
+                <strong>Descargo de Responsabilidad:</strong> La información proporcionada no constituye asesoramiento financiero, legal o crediticio profesional. Los resultados y recomendaciones son de carácter general, pueden no reflejar su situación crediticia real y no garantizamos mejoras específicas en el puntaje. Recomendamos consultar con profesionales financieros calificados antes de tomar decisiones crediticias importantes.
+              </p>
+              <p>
+                <strong>Información Regulatoria:</strong> Este sitio web opera como plataforma informativa. No realizamos reportes de crédito oficiales ni otorgamos préstamos. Para información oficial y actualizada sobre su historial crediticio, contacte directamente a las agencias de reportes de crédito autorizadas en México, como Buró de Crédito o Círculo de Crédito.
+              </p>
+            </div>
+            <p class="text-gray-400 text-sm">
+              © 2025 ScoreMX. US Headquarters: Miami, FL, USA | Mexico Office: Ciudad de México, México | 
+              Todos los derechos reservados. Este sitio ofrece únicamente servicios de orientación informativa, 
+              sin carácter oficial ni vinculante.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="fixed inset-x-0 bottom-0 z-[100] bg-black/95 border-t border-gray-800 shadow-2xl hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-5 max-h-[80vh] overflow-y-auto">
+            <div class="grid grid-cols-1 md:grid-cols-[1fr,240px] gap-4 md:gap-6 items-start">
+                <div class="text-gray-300 text-sm md:text-base leading-relaxed">
+                    <h3 class="text-white font-semibold mb-2">Aviso sobre uso de cookies</h3>
+                    <p class="mb-3">
+                        Este sitio web utiliza cookies y tecnologías similares para garantizar su funcionamiento correcto, mejorar la experiencia del usuario y, previo consentimiento, realizar mediciones de uso, personalizar contenidos y mostrar publicidad basada en intereses.
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-300 mb-3">
+                        <li><span class="font-medium">Estrictamente necesarias:</span> imprescindibles para permitir la navegación y el uso de funciones básicas del sitio.</li>
+                        <li><span class="font-medium">De preferencias:</span> guardan configuraciones y opciones personalizadas (por ejemplo, idioma o región).</li>
+                        <li><span class="font-medium">Analíticas o de medición:</span> recopilan datos anónimos sobre el uso del sitio para mejorar su rendimiento y servicios.</li>
+                        <li><span class="font-medium">De marketing:</span> permiten mostrar publicidad relevante en este y otros sitios, basada en tu comportamiento de navegación.</li>
+                    </ul>
+                    <p class="mb-2">No instalaremos cookies no esenciales sin tu consentimiento expreso. Puedes aceptar todas, rechazarlas o configurar tus preferencias en cualquier momento mediante el enlace «Preferencias de cookies» disponible en el pie de página.</p>
+                    <p class="text-gray-400">Para más información, consulta la <a href="cookies.html" class="underline hover:text-white">Política de cookies</a> y el <a href="aviso-de-privacidad.html" class="underline hover:text-white">Aviso de privacidad</a>.</p>
+                </div>
+                <div class="flex flex-col gap-2 sm:gap-3 md:border-l md:border-gray-800 md:pl-6 w-full md:w-[240px] md:justify-start items-stretch">
+                    <button type="button" class="cookie-reject btn-outline w-full px-4 sm:px-5 py-2 text-sm sm:text-base rounded-lg border border-gray-700 text-gray-200 hover:bg-gray-800">Rechazar</button>
+                    <button type="button" class="cookie-settings btn-outline w-full px-4 sm:px-5 py-2 text-sm sm:text-base rounded-lg border border-gray-700 text-gray-200 hover:bg-gray-800">Configurar</button>
+                    <button type="button" class="cookie-accept btn-primary w-full px-4 sm:px-5 py-2 text-sm sm:text-base rounded-lg">Aceptar todas</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Settings Modal -->
+    <div id="cookie-modal" class="fixed inset-0 z-[110] hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+        <div role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title"
+             class="relative max-w-3xl mx-auto mt-20 bg-gray-950 border border-gray-800 rounded-2xl shadow-2xl overflow-hidden">
+            <div class="px-6 py-5 border-b border-gray-800 flex items-center justify-between">
+                <h3 id="cookie-modal-title" class="text-xl font-semibold">Preferencias de cookies</h3>
+                <button type="button" class="cookie-modal-close text-gray-400 hover:text-white">✕</button>
+            </div>
+            <div class="px-6 py-5 space-y-6 text-gray-300">
+                <p class="text-sm leading-relaxed">
+                    Administras cómo usamos las cookies. Las «estrictamente necesarias» se colocan para proveer el servicio y no requieren consentimiento. Las demás categorías solo se activan si las autorizas. Puedes cambiar tu decisión en cualquier momento desde «Preferencias de cookies» en el pie de página. Este tratamiento se realiza de conformidad con la normativa aplicable (por ejemplo, GDPR/UE, LGPD/BR y la Ley Federal de Protección de Datos Personales en Posesión de los Particulares – LFPDPPP/MX).
+                </p>
+                <div class="space-y-5">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="cc-necessary" checked disabled class="mt-1 accent-gray-500">
+                        <div>
+                            <label for="cc-necessary" class="font-medium">Estrictamente necesarias</label>
+                            <p class="text-sm text-gray-400">Imprescindibles para que el sitio funcione y para mantener tu sesión y
+                                seguridad. No se pueden desactivar.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="cc-preferences" class="mt-1 accent-purple-500">
+                        <div>
+                            <label for="cc-preferences" class="font-medium">Preferencias</label>
+                            <p class="text-sm text-gray-400">Memorizan tus elecciones (por ejemplo, idioma) para ofrecer una
+                                experiencia coherente.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="cc-analytics" class="mt-1 accent-blue-500">
+                        <div>
+                            <label for="cc-analytics" class="font-medium">Medición y analíticas</label>
+                            <p class="text-sm text-gray-400">Nos ayudan a entender el uso del sitio (p. ej., páginas visitadas, tiempo),
+                                de forma agregada. No instalamos estas cookies sin tu consentimiento.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="cc-marketing" class="mt-1 accent-pink-500">
+                        <div>
+                            <label for="cc-marketing" class="font-medium">Marketing</label>
+                            <p class="text-sm text-gray-400">Usadas para personalizar mensajes o medir campañas. Solo se activan si lo
+                                autorizas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="px-6 py-5 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-end gap-3 bg-black/40">
+                <button type="button" class="cookie-modal-reject btn-outline px-5 py-2 rounded-lg border border-gray-700 text-gray-200 hover:bg-gray-800 w-full sm:w-auto">Rechazar todas</button>
+                <button type="button" class="cookie-modal-accept btn-primary px-5 py-2 rounded-lg w-full sm:w-auto">Aceptar todas</button>
+                <button type="button" class="cookie-modal-save btn-outline px-5 py-2 rounded-lg border border-gray-700 text-gray-200 hover:bg-gray-800 w-full sm:w-auto">Guardar preferencias</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

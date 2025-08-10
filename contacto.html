@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto – ScoreMX</title>
+  <link rel="stylesheet" href="./dist/output.css">
+
+  <!-- SEO -->
+  <meta name="description" content="Contáctanos: atendemos consultas desde nuestras oficinas en EE. UU. para clientes en México y comunidad hispanohablante en Norteamérica.">
+  <meta name="keywords" content="contacto, ScoreMX, orientación informativa, preguntas, México">
+  <link rel="canonical" href="https://scoremx.org/contacto.html">
+  <meta name="robots" content="index,follow">
+
+  <!-- Favicons / PWA -->
+  <link rel="icon" href="./images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+  <link rel="manifest" href="./images/site.webmanifest">
+  <meta name="theme-color" content="#0b0f14">
+
+  <!-- UX hints -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="format-detection" content="telephone=no">
+
+  <style>
+    .help-card{position:relative;border-radius:1rem;background:
+      radial-gradient(120% 80% at 10% -10%, rgba(99,102,241,0.10), rgba(99,102,241,0) 40%),
+      radial-gradient(120% 80% at 110% 10%, rgba(236,72,153,0.08), rgba(236,72,153,0) 45%),
+      linear-gradient(180deg, rgba(17,24,39,0.85), rgba(17,24,39,0.7));
+      border:1px solid rgba(31,41,55,0.9); box-shadow:0 8px 24px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.02); transition:transform .25s ease, box-shadow .25s ease}
+    .help-card:hover{transform:translateY(-2px); box-shadow:0 12px 28px rgba(0,0,0,0.45)}
+    .help-card::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;pointer-events:none;opacity:0;transition:opacity .25s ease;
+      background:linear-gradient(90deg,#3b82f6,#8b5cf6,#ec4899,#f59e0b,#10b981,#06b6d4,#3b82f6);background-size:400% 400%;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+    .help-card:hover::before{opacity:1}
+
+    /* Panel estilo "protect" para variar visual */
+    .protect-panel{position:relative;border-radius:1.25rem;overflow:hidden;border:1px solid #1f2937;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+    .protect-bg{position:absolute;inset:0;background:radial-gradient(120% 100% at 12% 8%,rgba(168,85,247,.22),rgba(168,85,247,0) 40%),radial-gradient(120% 100% at 88% 16%,rgba(59,130,246,.18),rgba(59,130,246,0) 46%),linear-gradient(180deg,rgba(17,24,39,.9),rgba(17,24,39,.85))}
+    .protect-body{position:relative;z-index:1}
+    .protect-visual{border-radius:1rem;background:#000;border:1px solid #1f2937;min-height:220px;box-shadow:0 15px 35px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.02);display:flex;align-items:center;justify-content:center;text-align:center;padding:1.5rem}
+
+    /* Feature-card para FAQ, другой визуальный тон */
+    .feature-card{position:relative;border-radius:1rem;background:rgba(255,255,255,0.05);border:1px solid #1f2937;padding:1.25rem}
+    .feature-card::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;pointer-events:none;opacity:0;transition:opacity .25s ease;background:linear-gradient(90deg,#3b82f6,#8b5cf6,#ec4899,#06b6d4);background-size:400% 400%;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+    .feature-card:hover::before{opacity:1}
+  </style>
+</head>
+<body class="bg-cursor-black text-cursor-white font-body">
+  <!-- Header (igual al sitio) -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-xl border-b border-gray-800 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="nav-logo"><img src="./images/logo.webp" alt="ScoreMX" class="h-8"></div>
+        <div class="nav-menu hidden md:flex space-x-8">
+          <a href="index.html" class="btn-text">Inicio</a>
+          <div class="relative group">
+            <button class="btn-text flex items-center space-x-1"><span>Servicios</span><svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+            <div class="absolute top-full left-0 mt-2 w-48 bg-gray-900 border border-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <div class="py-2">
+                <a href="revision-score.html" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 transition-colors">Analizar mi score</a>
+                <a href="preparacion-perfil.html" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 transition-colors">Orientación para mi perfil</a>
+              </div>
+            </div>
+          </div>
+          <a href="ventajas.html" class="btn-text">Ventajas</a>
+          <a href="sobre-nosotros.html" class="btn-text">Sobre nosotros</a>
+          <a href="contacto.html" class="btn-text">Contacto</a>
+        </div>
+        <div class="md:hidden">
+          <button class="mobile-menu-btn p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-800 transition-colors"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu-overlay fixed inset-0 bg-black/95 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-300 ease-in-out">
+    <div class="flex flex-col h-full">
+      <div class="flex justify-between items-center p-4 border-b border-gray-800">
+        <img src="./images/logo.webp" alt="ScoreMX" class="h-8">
+        <button class="mobile-menu-close p-2 rounded-md text-gray-300 hover:text-white"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+      </div>
+      <nav class="flex-1 px-4 py-8">
+        <div class="space-y-6">
+          <a href="index.html" class="block text-xl text-gray-300 hover:text-white transition-colors">Inicio</a>
+          <div class="mobile-services-dropdown">
+            <button class="mobile-services-btn flex items-center justify-between w-full text-xl text-gray-300 hover:text-white transition-colors"><span>Servicios</span><svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+            <div class="mobile-services-content hidden mt-4 ml-4 space-y-3">
+              <a href="revision-score.html" class="block text-lg text-gray-400 hover:text-white transition-colors">Analizar mi score</a>
+              <a href="preparacion-perfil.html" class="block text-lg text-gray-400 hover:text-white transition-colors">Orientación para mi perfil</a>
+            </div>
+          </div>
+          <a href="ventajas.html" class="block text-xl text-gray-300 hover:text-white transition-colors">Ventajas</a>
+          <a href="sobre-nosotros.html" class="block text-xl text-gray-300 hover:text-white transition-colors">Sobre nosotros</a>
+          <a href="contacto.html" class="block text-xl text-gray-300 hover:text-white transition-colors">Contacto</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <div class="hero-bg absolute inset-0 bg-gradient-to-br from-cursor-black via-gray-900 to-cursor-black"></div>
+    <div class="hero-content relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-6xl md:text-8xl font-bold mb-6 gradient-text font-display">Contáctanos</h1>
+      <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">En scoremx.org valoramos cada consulta y comentario. Nuestro objetivo es ofrecerte orientación basada en información pública y ayudarte a comprender mejor tu perfil crediticio.</p>
+      <p class="text-sm text-gray-400 max-w-3xl mx-auto mt-4">No prometemos resultados, aprobaciones ni tiempos de respuesta de terceros. Nuestra orientación es informativa.</p>
+    </div>
+  </section>
+
+  <!-- Cómo puedes contactarnos
+<li><strong>Oficinas:</strong> Operamos desde EE. UU. para clientes en México y comunidad hispanohablante en Norteamérica</li> (panel + visual) -->
+  <section class="section-border py-24 bg-cursor-black">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="protect-panel">
+        <div class="protect-bg"></div>
+        <div class="protect-body grid grid-cols-1 md:grid-cols-2 gap-8 p-6 md:p-10 items-stretch">
+          <div class="flex flex-col justify-end gap-4">
+            <div class="help-card p-6">
+        <h2 class="text-4xl md:text-5xl font-display font-bold mb-4 gradient-text">Cómo puedes contactarnos</h2>
+        <p class="text-gray-300 text-lg mb-4">Si tienes preguntas sobre nuestras guías informativas o deseas conocer más sobre cómo funciona nuestra plataforma, puedes comunicarte con nosotros a través de:</p>
+        
+        <p class="text-gray-400 mt-4">Atendemos consultas relacionadas con nuestras guías informativas. Para trámites o reportes oficiales, por favor acude a las instituciones correspondientes.</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-end">
+            <div class="protect-visual w-full md:w-[90%] lg:w-[85%]">
+              <div class="text-gray-400 text-center">
+                <ul class="space-y-2 text-gray-300 text-lg">
+                  <li><strong>Correo electrónico:</strong> <a href="mailto:admin@scoremx.org" class="underline hover:text-white">admin@scoremx.org</a></li>
+                  <li><strong>Teléfono:</strong> <a href="tel:+525416565150" class="underline hover:text-white">+52 54 1656 5150</a>,</li>
+                  <li><a href="tel:+13055550198" class="underline hover:text-white">+1 305 555 0198</a></li>
+                  <li><strong>Oficinas:</strong> Operación coordinada desde EE. UU. y México, con servicios orientados a clientes en territorio mexicano y comunidad hispanohablante en Norteamérica. Atención exclusivamente en línea</li>
+                  <li><strong>Horario de atención:</strong> Lunes a Viernes, 9:00 – 18:00 (hora CDMX)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Qué esperar de nuestra respuesta -->
+  <section class="section-border py-24 bg-cursor-black">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="feature-card p-8">
+        <h2 class="text-4xl md:text-5xl font-display font-bold mb-4 gradient-text">Qué esperar de nuestra respuesta</h2>
+        <p class="text-gray-300 text-lg mb-4">Al recibir tu mensaje, será revisado y derivado al miembro de nuestro equipo más adecuado para atenderlo. El tiempo estimado de respuesta es de 24 a 48 horas hábiles.</p>
+        <p class="text-gray-400">Todas las respuestas se basan en información pública y actualizada, y se ofrecen únicamente con fines informativos. No constituyen asesoría financiera o legal ni garantizan la aprobación de créditos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aviso importante (panel dividido) -->
+  <section class="section-border py-24 bg-cursor-black">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="protect-panel">
+        <div class="protect-bg"></div>
+        <div class="protect-body grid grid-cols-1 md:grid-cols-2 gap-8 p-6 md:p-10 items-stretch">
+          <div class="flex flex-col justify-end gap-4">
+            <h2 class="text-4xl md:text-5xl font-display font-bold gradient-text">Aviso importante</h2>
+            <ul class="list-disc list-inside space-y-2 text-gray-300">
+              <li>Plataforma informativa: no emitimos reportes de crédito oficiales.</li>
+              <li>No otorgamos préstamos ni intermediamos aprobaciones.</li>
+              <li>Para información oficial, acude a Buró de Crédito o Círculo de Crédito.</li>
+            </ul>
+            <p class="text-gray-400">Las orientaciones son educativas y generales, no constituyen asesoría financiera o legal.</p>
+          </div>
+          <div class="flex items-center justify-end">
+            <div class="protect-visual w-full md:w-[90%] lg:w-[85%]">
+              <div class="text-center text-gray-300">
+                <div class="text-2xl font-display mb-2">Alcances del servicio</div>
+                <div class="text-sm">informativo · sin reportes oficiales · sin préstamos</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Protección de datos (grid de puntos clave) -->
+  <section class="section-border py-24 bg-cursor-black">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="text-4xl md:text-5xl font-display font-bold gradient-text">Protección de datos</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="feature-card p-6">
+          <h3 class="text-xl font-semibold mb-2">Minimización de datos</h3>
+          <p class="text-gray-300">Solicitamos sólo la información necesaria para orientarte.</p>
+        </div>
+        <div class="feature-card p-6">
+          <h3 class="text-xl font-semibold mb-2">Sin terceros no autorizados</h3>
+          <p class="text-gray-300">No compartimos datos sin base legal o tu consentimiento.</p>
+        </div>
+        <div class="feature-card p-6">
+          <h3 class="text-xl font-semibold mb-2">Tus derechos</h3>
+          <p class="text-gray-300">Puedes ejercer tus derechos ARCO. Consulta la <a href="aviso-de-privacidad.html" class="underline hover:text-white">Política de Privacidad</a>.</p>
+        </div>
+      </div>
+      <div class="mt-6 p-6 bg-gray-900/30 rounded-xl border border-gray-800 text-gray-400 text-sm text-center">La información enviada por correo se trata conforme a nuestra Política de Privacidad; puedes solicitar su eliminación.</div>
+    </div>
+  </section>
+
+  <!-- Antes de escribirnos (tira minimalista con CTA) -->
+  <section class="section-border py-16 bg-cursor-black">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="p-6 bg-black/60 border border-gray-800 rounded-xl text-center">
+        <h2 class="text-3xl md:text-4xl font-display font-bold mb-2">Antes de escribirnos</h2>
+        <p class="text-gray-300 mb-4">Consulta primero nuestra sección de Preguntas Frecuentes: resolvemos las dudas más comunes sobre nuestros servicios y funcionamiento.</p>
+        <a href="#faq" class="btn-outline px-6 py-3 rounded-lg border border-gray-700 text-gray-200 hover:bg-gray-800 inline-block">Ir a FAQ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preguntas frecuentes (FAQ) -->
+  <section id="faq" class="section-border py-24 bg-cursor-black">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold gradient-text font-display">Preguntas frecuentes</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="feature-card p-6">
+          <h3 class="text-2xl font-bold mb-2">¿Emiten reportes oficiales de Buró de Crédito?</h3>
+          <p class="text-gray-300">No. Nuestro sitio ofrece únicamente orientación y análisis basados en información pública. Para obtener un reporte oficial, debes solicitarlo directamente a Buró de Crédito o Círculo de Crédito.</p>
+        </div>
+        <div class="feature-card p-6">
+          <h3 class="text-2xl font-bold mb-2">¿Pueden mejorar mi score crediticio?</h3>
+          <p class="text-gray-300">No intervenimos directamente en el cálculo o modificación de tu score. Brindamos información útil y recomendaciones generales para que tomes decisiones más informadas.</p>
+        </div>
+        <div class="feature-card p-6">
+          <h3 class="text-2xl font-bold mb-2">¿Cobran por responder consultas?</h3>
+          <p class="text-gray-300">Algunas herramientas y orientaciones son gratuitas; otros servicios pueden tener costo, el cual se informará previamente a su contratación.</p>
+        </div>
+        <div class="feature-card p-6">
+          <h3 class="text-2xl font-bold mb-2">¿Puedo solicitar un préstamo a través de ustedes?</h3>
+          <p class="text-gray-300">No. No otorgamos créditos ni actuamos como intermediarios financieros. Nuestro papel es únicamente informativo.</p>
+        </div>
+        <div class="feature-card p-6">
+          <h3 class="text-2xl font-bold mb-2">¿Qué información debo incluir en mi mensaje de contacto?</h3>
+          <p class="text-gray-300">Indica tu situación general y el servicio que te interesa. No compartas datos personales sensibles como números de cuenta, CURP, RFC o información bancaria.</p>
+        </div>
+        <div class="feature-card p-6">
+          <h3 class="text-2xl font-bold mb-2">¿Cuánto tardan en responder?</h3>
+          <p class="text-gray-300">Normalmente respondemos en un plazo de 24 a 48 horas hábiles, según la complejidad de la consulta.</p>
+        </div>
+        <div class="feature-card p-6 md:col-span-2">
+          <h3 class="text-2xl font-bold mb-2">¿Cómo protegen mis datos?</h3>
+          <p class="text-gray-300">La información que nos proporciones será tratada conforme a nuestra <a href="aviso-de-privacidad.html" class="underline hover:text-white">Política de Privacidad</a> y no se compartirá con terceros sin tu consentimiento, salvo requerimiento legal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (igual al sitio) -->
+  <footer class="footer bg-black/95 backdrop-blur-xl py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="footer-content">
+        <div class="footer-top flex flex-col lg:flex-row justify-between items-start mb-12">
+          <div class="footer-brand mb-8 lg:mb-0">
+            <img src="./images/logo.webp" alt="ScoreMX" class="h-8 mb-4">
+            <div class="footer-contact space-y-2">
+              <div class="flex flex-col space-y-1">
+                <a href="mailto:admin@scoremx.org" class="footer-link text-gray-400 hover:text-white transition-colors duration-300 relative group">
+                  admin@scoremx.org
+                  <span class="footer-link-underline absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                  <svg class="footer-link-arrow absolute -right-6 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400 group-hover:text-white transition-colors duration-300 opacity-0 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"></path>
+                  </svg>
+                </a>
+                <a href="tel:+525416565150" class="footer-link text-gray-400 hover:text-white transition-colors duration-300 relative group">
+                  +52 54 1656 5150
+                  <span class="footer-link-underline absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                  <svg class="footer-link-arrow absolute -right-6 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400 group-hover:text-white transition-colors duration-300 opacity-0 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"></path>
+                  </svg>
+                </a>
+                <a href="tel:+13055550198" class="footer-link text-gray-400 hover:text-white transition-colors duration-300 relative group">
+                  +1 305 555 0198
+                  <span class="footer-link-underline absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                  <svg class="footer-link-arrow absolute -right-6 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400 group-hover:text-white transition-colors duration-300 opacity-0 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-language mb-8 lg:mb-0 flex items-center gap-3">
+            <button type="button" class="open-cookie-settings text-gray-400 hover:text-white transition-colors underline underline-offset-4">Preferencias de cookies</button>
+            <select class="bg-gray-800 border border-gray-700 text-white px-4 py-2 rounded-lg footer-lang-select"><option value="es">Español</option><option value="en">English</option></select>
+          </div>
+        </div>
+        <div class="footer-sections grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div class="footer-section"><h4 class="text-white font-semibold mb-4 uppercase tracking-wider">Servicios</h4>
+            <ul class="space-y-2">
+              <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Inicio</a></li>
+              <li><a href="revision-score.html" class="text-gray-400 hover:text-white transition-colors">Analizar mi score</a></li>
+              <li><a href="preparacion-perfil.html" class="text-gray-400 hover:text-white transition-colors">Orientación para mi perfil</a></li>
+              <li><a href="ventajas.html" class="text-gray-400 hover:text-white transition-colors">Ventajas</a></li>
+            </ul>
+          </div>
+          <div class="footer-section"><h4 class="text-white font-semibold mb-4 uppercase tracking-wider">Empresa</h4>
+            <ul class="space-y-2">
+              <li><a href="sobre-nosotros.html" class="text-gray-400 hover:text-white transition-colors">Sobre nosotros</a></li>
+              <li><a href="contacto.html" class="text-gray-400 hover:text-white transition-colors">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="footer-section"><h4 class="text-white font-semibold mb-4 uppercase tracking-wider">Legal</h4>
+            <ul class="space-y-2">
+              <li><a href="aviso-de-privacidad.html" class="text-gray-400 hover:text-white transition-colors">Política de privacidad</a></li>
+              <li><a href="terminos.html" class="text-gray-400 hover:text-white transition-colors">Términos y condiciones</a></li>
+              <li><a href="aviso-legal.html" class="text-gray-400 hover:text-white transition-colors">Aviso legal</a></li>
+              <li><a href="cookies.html" class="text-gray-400 hover:text-white transition-colors">Política de cookies</a></li>
+              <li><a href="reembolsos.html" class="text-gray-400 hover:text-white transition-colors">Política de reembolsos</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom border-t border-gray-800 pt-8">
+          <div class="text-center space-y-4">
+            <div class="text-gray-400 text-sm max-w-4xl mx-auto leading-relaxed">
+              <p class="mb-3">
+                <strong>Aviso Legal:</strong> ScoreMX proporciona servicios de orientación y análisis informativo basados en datos proporcionados por el usuario y en fuentes públicas. No somos una agencia de reportes de crédito, ni una entidad financiera regulada. No tenemos acceso a información confidencial de Buró de Crédito ni de Círculo de Crédito, ni modificamos puntajes oficiales. Nuestros servicios son únicamente de carácter informativo y educativo.
+              </p>
+              <p class="mb-3">
+                <strong>Ubicación:</strong> ScoreMX cuenta con sede operativa en Estados Unidos y presta servicios informativos a clientes en México y a hispanohablantes residentes en Norteamérica.
+              </p>
+              <p class="mb-3">
+                <strong>Descargo de Responsabilidad:</strong> La información proporcionada no constituye asesoramiento financiero, legal o crediticio profesional. Los resultados y recomendaciones son de carácter general, pueden no reflejar su situación crediticia real y no garantizamos mejoras específicas en el puntaje. Recomendamos consultar con profesionales financieros calificados antes de tomar decisiones crediticias importantes.
+              </p>
+              <p>
+                <strong>Información Regulatoria:</strong> Este sitio web opera como plataforma informativa. No realizamos reportes de crédito oficiales ni otorgamos préstamos. Para información oficial y actualizada sobre su historial crediticio, contacte directamente a las agencias de reportes de crédito autorizadas en México, como Buró de Crédito o Círculo de Crédito.
+              </p>
+            </div>
+            <p class="text-gray-400 text-sm">
+              © 2025 ScoreMX. US Headquarters: Miami, FL, USA | Mexico Office: Ciudad de México, México | 
+              Todos los derechos reservados. Este sitio ofrece únicamente servicios de orientación informativa, 
+              sin carácter oficial ni vinculante.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Banner (igual) -->
+  <div id="cookie-banner" class="fixed inset-x-0 bottom-0 z-[100] bg-black/95 border-t border-gray-800 shadow-2xl hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-5 max-h-[80vh] overflow-y-auto">
+      <div class="grid grid-cols-1 md:grid-cols-[1fr,240px] gap-4 md:gap-6 items-start">
+        <div class="text-gray-300 text-sm md:text-base leading-relaxed">
+          <h3 class="text-white font-semibold mb-2">Aviso sobre uso de cookies</h3>
+          <p class="mb-3">Este sitio web utiliza cookies y tecnologías similares para garantizar su funcionamiento correcto, mejorar la experiencia del usuario y, previo consentimiento, realizar mediciones de uso, personalizar contenidos y mostrar publicidad basada en intereses.</p>
+          <ul class="list-disc list-inside space-y-1 text-gray-300 mb-3"><li><span class="font-medium">Estrictamente necesarias:</span> imprescindibles para permitir la navegación y el uso de funciones básicas del sitio.</li><li><span class="font-medium">De preferencias:</span> guardan configuraciones y opciones personalizadas (por ejemplo, idioma o región).</li><li><span class="font-medium">Analíticas o de medición:</span> recopilan datos anónimos sobre el uso del sitio para mejorar su rendimiento y servicios.</li><li><span class="font-medium">De marketing:</span> permiten mostrar publicidad relevante en este y otros sitios, basada en tu comportamiento de navegación.</li></ul>
+          <p class="mb-2">No instalaremos cookies no esenciales sin tu consentimiento expreso. Puedes aceptar todas, rechazarlas o configurar tus preferencias en cualquier momento mediante el enlace «Preferencias de cookies» disponible en el pie de página.</p>
+          <p class="text-gray-400">Para más información, consulta la <a href="cookies.html" class="underline hover:text-white">Política de cookies</a> y el <a href="aviso-de-privacidad.html" class="underline hover:text-white">Aviso de privacidad</a>.</p>
+        </div>
+        <div class="flex flex-col gap-2 sm:gap-3 md:border-l md:border-gray-800 md:pl-6 w-full md:w-[240px] md:justify-start items-stretch">
+          <button type="button" class="cookie-reject btn-outline w-full px-4 sm:px-5 py-2 text-sm sm:text-base rounded-lg border border-gray-700 text-gray-200 hover:bg-gray-800">Rechazar</button>
+          <button type="button" class="cookie-settings btn-outline w-full px-4 sm:px-5 py-2 text-sm sm:text-base rounded-lg border border-gray-700 text-gray-200 hover:bg-gray-800">Configurar</button>
+          <button type="button" class="cookie-accept btn-primary w-full px-4 sm:px-5 py-2 text-sm sm:text-base rounded-lg">Aceptar todas</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cookie Settings Modal -->
+  <div id="cookie-modal" class="fixed inset-0 z-[110] hidden">
+    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+    <div role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title" class="relative max-w-3xl mx-auto mt-20 bg-gray-950 border border-gray-800 rounded-2xl shadow-2xl overflow-hidden">
+      <div class="px-6 py-5 border-b border-gray-800 flex items-center justify-between"><h3 id="cookie-modal-title" class="text-xl font-semibold">Preferencias de cookies</h3><button type="button" class="cookie-modal-close text-gray-400 hover:text-white">✕</button></div>
+      <div class="px-6 py-5 space-y-6 text-gray-300"><p class="text-sm leading-relaxed">Administras cómo usamos las cookies. Las «estrictamente necesarias» se colocan para proveer el servicio y no requieren consentimiento. Las demás categorías solo se activan si las autorizas. Puedes cambiar tu decisión en cualquier momento desde «Preferencias de cookies» en el pie de página. Este tratamiento se realiza de conformidad con la normativa aplicable (por ejemplo, GDPR/UE, LGPD/BR y la Ley Federal de Protección de Datos Personales en Posesión de los Particulares – LFPDPPP/MX).</p>
+        <div class="space-y-5">
+          <div class="flex items-start gap-4"><input type="checkbox" id="cc-necessary" checked disabled class="mt-1 accent-gray-500"><div><label for="cc-necessary" class="font-medium">Estrictamente necesarias</label><p class="text-sm text-gray-400">Imprescindibles para que el sitio funcione y para mantener tu sesión y seguridad. No se pueden desactivar.</p></div></div>
+          <div class="flex items-start gap-4"><input type="checkbox" id="cc-preferences" class="mt-1 accent-purple-500"><div><label for="cc-preferences" class="font-medium">Preferencias</label><p class="text-sm text-gray-400">Memorizan tus elecciones (por ejemplo, idioma) para ofrecer una experiencia coherente.</p></div></div>
+          <div class="flex items-start gap-4"><input type="checkbox" id="cc-analytics" class="mt-1 accent-blue-500"><div><label for="cc-analytics" class="font-medium">Medición y analíticas</label><p class="text-sm text-gray-400">Nos ayudan a entender el uso del sitio (p. ej., páginas visitadas, tiempo), de forma agregada. No instalamos estas cookies sin tu consentimiento.</p></div></div>
+          <div class="flex items-start gap-4"><input type="checkbox" id="cc-marketing" class="mt-1 accent-pink-500"><div><label for="cc-marketing" class="font-medium">Marketing</label><p class="text-sm text-gray-400">Usadas para personalizar mensajes o medir campañas. Solo se activan si lo autorizas.</p></div></div>
+        </div>
+      </div>
+      <div class="px-6 py-5 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-end gap-3 bg-black/40"><button type="button" class="cookie-modal-reject btn-outline px-5 py-2 rounded-lg border border-gray-700 text-gray-200 hover:bg-gray-800 w-full sm:w-auto">Rechazar todas</button><button type="button" class="cookie-modal-accept btn-primary px-5 py-2 rounded-lg w-full sm:w-auto">Aceptar todas</button><button type="button" class="cookie-modal-save btn-outline px-5 py-2 rounded-lg border border-gray-700 text-gray-200 hover:bg-gray-800 w-full sm:w-auto">Guardar preferencias</button></div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
+
+
